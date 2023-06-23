@@ -3,6 +3,7 @@
 @use '../../../../modules/states/hovers';
 
 .main-nav {
+    background-color: vars.$primary;
 
     .item {
         @include fonts.main-bolded-font();

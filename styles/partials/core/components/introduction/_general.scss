@@ -3,6 +3,12 @@
 @use '../../../../modules/states/hovers';
 
 .introduction {
+    margin-top: vars.$large-gap;
+    
+    .image {
+        border: 4px solid vars.$primary;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
     .title {
         @include fonts.hand-written-font(72px);
         color: vars.$accent;
