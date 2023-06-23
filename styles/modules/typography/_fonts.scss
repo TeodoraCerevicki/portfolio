@@ -18,3 +18,7 @@
 @mixin main-bolded-font($size: vars.$font-size-default) {
 	@include -font('Quicksand SemiBold', $size);
 }
+
+@mixin hand-written-font($size: vars.$font-size-default) {
+	@include -font('Caveat', $size);
+}

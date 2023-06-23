@@ -1,0 +1,17 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/states/hovers';
+
+.main-nav {
+
+    .item {
+        @include fonts.main-bolded-font();
+        @include hovers.background-hover(vars.$primary, vars.$accent);
+        padding: vars.$default-gap;
+        font-size: vars.$font-size-large;
+
+        &:hover {
+            color: vars.$font-color;
+        }
+    }
+}

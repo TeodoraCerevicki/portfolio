@@ -9,6 +9,7 @@ body {
 	@include fonts.main-font(vars.$font-size-large);
 	margin: 0;
 	color: vars.$font-color;
+    background-color: vars.$primary;
 
 	* {
 		outline-color: vars.$accent;

@@ -1,0 +1,10 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/states/hovers';
+
+.introduction {
+    .title {
+        @include fonts.hand-written-font(72px);
+        color: vars.$accent;
+    }
+}

@@ -12,9 +12,10 @@ html, body {
 
 body {
   font-family: "Quicksand Regular";
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
-  color: #17534C;
+  color: #FDF5E4;
+  background-color: #1f2827;
 }
 body * {
   outline-color: #D8573D;
@@ -37,19 +38,17 @@ button {
 }
 
 a {
-  color: #D8573D;
+  color: #FDF5E4;
   transition: 0.3s;
   display: inline-block;
-  transition: 0.3s;
   text-decoration: none;
-  cursor: pointer;
 }
 a:hover, a:hover::before {
-  color: #2C6B64;
+  color: #EF7459;
 }
 @media (hover: hover) {
   a:hover {
-    color: #2C6B64;
+    color: #EF7459;
   }
 }
 
@@ -59,8 +58,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-family: "Quicksand SemiBold";
-  font-size: 18px;
-  color: #2C6B64;
+  font-size: 20px;
+  color: #1f2827;
   line-height: 1.25;
 }
 
@@ -74,7 +73,7 @@ li {
 }
 
 p {
-  color: #17534C;
+  color: #FDF5E4;
 }
 
 @font-face {
@@ -112,11 +111,11 @@ p {
 }
 
 .button-primary {
-  background-color: #2C6B64;
+  background-color: #1f2827;
   transition: 0.3s;
 }
 .button-primary:hover {
-  background-color: #478B86;
+  background-color: #2b3e3c;
 }
 
 .button-accent {
@@ -125,6 +124,27 @@ p {
 }
 .button-accent:hover {
   background-color: #EF7459;
+}
+
+.main-nav .item {
+  font-family: "Quicksand SemiBold";
+  font-size: 16px;
+  background-color: #1f2827;
+  transition: 0.3s;
+  padding: 16px;
+  font-size: 20px;
+}
+.main-nav .item:hover {
+  background-color: #D8573D;
+}
+.main-nav .item:hover {
+  color: #FDF5E4;
+}
+
+.introduction .title {
+  font-family: "Caveat";
+  font-size: 72px;
+  color: #D8573D;
 }
 
 .first-letter-capitalized {

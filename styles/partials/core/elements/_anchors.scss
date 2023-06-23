@@ -2,9 +2,7 @@
 @use '../../../modules/states/hovers';
 
 a {
-	@include hovers.accent-font-hover();
+	@include hovers.font-hover(vars.$font-color, vars.$accent-light);
 	display: inline-block;
-	transition: vars.$default-transition;
 	text-decoration: none;
-	cursor: pointer;
 }
