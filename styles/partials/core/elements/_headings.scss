@@ -1,0 +1,12 @@
+@use '../../../modules/variables' as vars;
+@use '../../../modules/typography/fonts';
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+h1 {
+	@include fonts.main-bolded-font(vars.$font-size-large);
+	color: vars.$primary;
+	line-height: 1.25;
+}

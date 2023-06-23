@@ -1,0 +1,10 @@
+@use '../../../modules/variables' as vars;
+@use '../../../modules/states/hovers';
+
+a {
+	@include hovers.accent-font-hover();
+	display: inline-block;
+	transition: vars.$default-transition;
+	text-decoration: none;
+	cursor: pointer;
+}

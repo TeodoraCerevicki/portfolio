@@ -1,0 +1,20 @@
+@use '../variables' as vars;
+
+@mixin -font($family, $size) {
+	font: {
+		family: $family;
+		size: $size;
+	};
+}
+
+@mixin main-font($size: vars.$font-size-default) {
+	@include -font('Quicksand Regular', $size);
+}
+
+@mixin main-medium-font($size: vars.$font-size-default) {
+	@include -font('Quicksand Medium', $size);
+}
+
+@mixin main-bolded-font($size: vars.$font-size-default) {
+	@include -font('Quicksand SemiBold', $size);
+}

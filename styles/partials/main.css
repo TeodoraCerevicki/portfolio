@@ -1,0 +1,187 @@
+img {
+  width: 100%;
+}
+
+.main-container {
+  padding: 32px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Quicksand Regular";
+  font-size: 18px;
+  margin: 0;
+  color: #17534C;
+}
+body * {
+  outline-color: #D8573D;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, footer, article, aside, ul, li {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+span {
+  line-height: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  color: #D8573D;
+  transition: 0.3s;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, a:hover::before {
+  color: #2C6B64;
+}
+@media (hover: hover) {
+  a:hover {
+    color: #2C6B64;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Quicksand SemiBold";
+  font-size: 18px;
+  color: #2C6B64;
+  line-height: 1.25;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  color: #17534C;
+}
+
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/Caveat/Caveat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Quicksand Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/Quicksand/static/Quicksand-Regular.ttf");
+}
+@font-face {
+  font-family: "Quicksand Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/Quicksand/static/Quicksand-Medium.ttf");
+}
+@font-face {
+  font-family: "Quicksand SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf");
+}
+.button-accent, .button-primary {
+  font-family: "Quicksand SemiBold";
+  font-size: 16px;
+  padding: 16px 22px;
+  transition: 0.2s;
+  border: 1px solid transparent;
+  line-height: 1.1;
+  color: #FDF5E4;
+}
+
+.button-primary {
+  background-color: #2C6B64;
+  transition: 0.3s;
+}
+.button-primary:hover {
+  background-color: #478B86;
+}
+
+.button-accent {
+  background-color: #D8573D;
+  transition: 0.3s;
+}
+.button-accent:hover {
+  background-color: #EF7459;
+}
+
+.first-letter-capitalized {
+  display: inline-block;
+}
+.first-letter-capitalized::first-letter {
+  text-transform: capitalize;
+}
+
+.capitalized {
+  text-transform: uppercase;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.align-vertical {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.draggable {
+  cursor: grab;
+}
+
+.forbidden {
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=main.css.map */

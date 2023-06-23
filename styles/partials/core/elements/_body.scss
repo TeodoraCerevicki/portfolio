@@ -1,0 +1,25 @@
+@use '../../../modules/variables' as vars;
+@use '../../../modules/typography/fonts';
+
+html, body {
+	height: 100%;
+}
+
+body {
+	@include fonts.main-font(vars.$font-size-large);
+	margin: 0;
+	color: vars.$font-color;
+
+	* {
+		outline-color: vars.$accent;
+	}
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, footer, article, aside, ul, li {
+	box-sizing: border-box;
+	line-height: 1.5;
+}
+
+span {
+	line-height: inherit;
+}

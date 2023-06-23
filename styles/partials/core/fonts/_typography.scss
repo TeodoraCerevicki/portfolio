@@ -1,0 +1,37 @@
+$fonts-path: '../../assets/fonts';
+
+@font-face {
+    font: {
+        family: 'Caveat';
+		style: normal;
+		weight: 400;
+    }
+    src: url('#{$fonts-path}/Caveat/Caveat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font: {
+        family: 'Quicksand Regular';
+		style: normal;
+		weight: 400;
+    }
+    src: url('#{$fonts-path}/Quicksand/static/Quicksand-Regular.ttf');
+}
+
+@font-face {
+    font: {
+        family: 'Quicksand Medium';
+		style: normal;
+		weight: 500;
+    }
+    src: url('#{$fonts-path}/Quicksand/static/Quicksand-Medium.ttf');
+}
+
+@font-face {
+    font: {
+        family: 'Quicksand SemiBold';
+		style: normal;
+		weight: 600;
+    }
+    src: url('#{$fonts-path}/Quicksand/static/Quicksand-SemiBold.ttf');
+}

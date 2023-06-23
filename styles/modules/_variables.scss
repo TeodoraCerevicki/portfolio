@@ -1,0 +1,29 @@
+$primary:  #2C6B64;
+$primary-light:  #478B86;
+
+$accent: #D8573D;
+$accent-light: #EF7459;
+
+$font-color: #17534C;
+$font-color-light: #FDF5E4;
+
+$font-size-default: 16px;
+$font-size-large: 18px;
+
+$default-gap: 16px;
+$large-gap: calc($default-gap * 2);
+$small-gap: calc($default-gap / 2);
+
+$border-radius: 4px;
+$default-border: 1px solid #424445;
+
+$default-transition: .3s;
+
+
+// -------------------------------------
+// testing
+
+
+.main-container {
+    padding: $large-gap;
+}

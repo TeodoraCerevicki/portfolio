@@ -1,0 +1,22 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/states/hovers';
+
+%button {
+	@include fonts.main-bolded-font();
+	padding: vars.$default-gap 22px;
+	transition: .2s;
+	border: 1px solid transparent;
+	line-height: 1.1;
+	color: vars.$font-color-light;
+}
+
+.button-primary {
+	@extend %button;
+	@include hovers.primary-background-hover();
+}
+
+.button-accent {
+	@extend %button;
+	@include hovers.accent-background-hover();
+}

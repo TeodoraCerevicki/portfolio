@@ -1,0 +1,5 @@
+@use '../../../modules/variables' as vars;
+
+p {
+	color: vars.$font-color;
+}
