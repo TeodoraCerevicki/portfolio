@@ -1,6 +1,7 @@
 @use '../../../../modules/variables' as vars;
 
 .skills {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     height: 100vh;

@@ -130,7 +130,9 @@ p {
   color: #f1eee6;
   transition: 0.3s;
   position: absolute;
+  left: 50%;
   bottom: 4%;
+  transform: translateX(-50%);
   font-size: 60px;
   cursor: pointer;
   border: 1px solid transparent;
@@ -167,6 +169,7 @@ p {
 }
 
 .introduction {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   height: calc(100vh - 62px);
@@ -314,6 +317,7 @@ p {
 }
 
 .skills {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   height: 100vh;
@@ -328,6 +332,7 @@ p {
 }
 
 .contact {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;

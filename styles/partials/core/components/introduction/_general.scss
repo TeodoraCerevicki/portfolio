@@ -3,6 +3,7 @@
 @use '../../../../modules/states/hovers';
 
 .introduction {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     height: calc(100vh - 62px);

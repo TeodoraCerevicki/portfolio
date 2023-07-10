@@ -26,7 +26,9 @@
 .scroll-button {
 	@include hovers.font-hover(vars.$font-color, vars.$accent);
 	position: absolute;
+	left: 50%;
     bottom: 4%;
+	transform: translateX(-50%);
     font-size: 60px;
     cursor: pointer;
 	border: 1px solid transparent;
