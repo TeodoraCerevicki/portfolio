@@ -2,16 +2,22 @@
 @use '../../../../modules/typography/fonts';
 @use '../../../../modules/states/hovers';
 
+@use 'sass:color';
+
 .main-nav {
-    background-color: vars.$primary;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: color.adjust(#000, $alpha: -.4);
 
     .item {
         @include fonts.main-bolded-font();
-        @include hovers.background-hover(vars.$primary, vars.$accent);
         padding: vars.$default-gap;
         font-size: vars.$font-size-large;
 
         &:hover {
+            background-color: vars.$accent;
             color: vars.$font-color;
         }
     }

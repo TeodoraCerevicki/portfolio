@@ -126,29 +126,56 @@ p {
   background-color: #EF7459;
 }
 
+.scroll-button {
+  color: #f1eee6;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 4%;
+  font-size: 60px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.scroll-button:hover, .scroll-button:hover::before {
+  color: #D8573D;
+}
+@media (hover: hover) {
+  .scroll-button:hover {
+    color: #D8573D;
+  }
+}
+.scroll-button:hover {
+  border-color: #D8573D;
+}
+
 .main-nav {
-  background-color: #1f2827;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .main-nav .item {
   font-family: "Quicksand SemiBold";
   font-size: 16px;
-  background-color: #1f2827;
-  transition: 0.3s;
   padding: 16px;
   font-size: 20px;
 }
 .main-nav .item:hover {
   background-color: #D8573D;
-}
-.main-nav .item:hover {
   color: #f1eee6;
 }
 
 .introduction {
-  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 62px);
+}
+.introduction .item {
+  flex: 1 1 50%;
 }
 .introduction .image {
-  border: 4px solid #1f2827;
+  height: 100%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .introduction .title {
@@ -161,7 +188,7 @@ p {
   --paper-color: #ecb2ba;
   --paper-dark: #c6939a;
   --shadow-size: 1px;
-  --transparent: rgba(236, 178, 186, 0);
+  --transparent: rgba(213, 224, 249, 0);
 }
 
 .blue {
@@ -250,6 +277,40 @@ p {
 .about {
   width: 50%;
   margin: 0 auto;
+}
+
+.opening-hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  padding-top: 10%;
+  background-image: url(../../assets/images/background/bg-days.jpg);
+  background-size: cover;
+}
+.opening-hero .title {
+  color: #D8573D;
+}
+.opening-hero .text {
+  font-size: 50px;
+  line-height: 1.45;
+  display: inline;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  background: #fff;
+  padding: 0 16px;
+}
+
+.layout {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .first-letter-capitalized {

@@ -17,6 +17,7 @@
             <li><a class="item" href="">Home</a></li>
             <li><a class="item" href="">About</a></li>
             <li><a class="item" href="">Experience</a></li>
+            <li><a class="item" href="">Skills</a></li>
         </ul>
 
         <ul class="align-center">
@@ -34,17 +35,27 @@
     </nav>
 
     <main>
-        <section class="introduction container-fluid">
-            <div class="row">
-                <div class="col-12 col-md-6"><img src="assets/images/thea.jpg" class="image" alt="image of Thea"></div>
-                <div class="col-12 col-md-6">
-                    <h1 class="title">Teodora Čerevicki</h1>
-                    <h2 class="title">Frontend developer</h2>
+        <header class="opening-hero">
+            <h1 class="title">
+                <div class="text">
+                    Hi there! <br>
+                    interested in <br>
+                    cup of Thea?
                 </div>
-            </div>
-        </section>
+            </h1>
 
-        <section class="about">
+            <a href="#about" class="icon-arrow-down scroll-button"></a>
+            <!-- <div class="layout"></div> -->
+        </header>
+
+        <section id="about" class="about">
+
+            <div class="item"><img src="assets/images/thea.jpg" class="image" alt="image of Thea"></div>
+            <div class="item">
+                <h1 class="title">Teodora Čerevicki</h1>
+                <h2 class="title">Frontend developer</h2>
+            </div>
+
             <div class="paper pink">
                 <div class="tape-section top-tapes"></div>
                 <p class="text">drink more water</p>
@@ -55,6 +66,10 @@
                 <div class="single-tape"></div>
                 <p class="text">code more pens</p>
               </div>
+        </section>
+
+        <section class="experience">
+            <p>over 20 projects, 15 of them are enterpriese</p>
         </section>
     </main>
 

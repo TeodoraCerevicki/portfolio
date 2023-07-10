@@ -1,0 +1,40 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/layouts/alignments/items';
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/states/hovers';
+
+$background-path: '../../assets/images/background';
+
+.opening-hero {
+    @include items.fully-align(stretch, center);
+    position: relative;
+    height: 100vh;
+    padding-top: 10%;
+    background: {
+        image: url(#{$background-path}/bg-days.jpg);
+        size: cover;
+    }
+
+    .title {
+        color: vars.$accent;
+    }
+
+    .text {
+
+        font-size: 50px;
+        line-height: 1.45;
+        display: inline;
+        box-decoration-break: clone;
+        background: #fff;
+        padding: 0 vars.$default-gap;
+    }
+}
+
+.layout {
+    background-color:rgba(0,0,0, 0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

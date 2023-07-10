@@ -2,6 +2,8 @@
 @use '../../../../modules/typography/fonts';
 @use '../../../../modules/states/hovers';
 
+@use 'sass:color';
+
 %button {
 	@include fonts.main-bolded-font();
 	padding: vars.$default-gap 22px;
@@ -19,4 +21,18 @@
 .button-accent {
 	@extend %button;
 	@include hovers.accent-background-hover();
+}
+
+.scroll-button {
+	@include hovers.font-hover(vars.$font-color, vars.$accent);
+	position: absolute;
+    bottom: 4%;
+    font-size: 60px;
+    cursor: pointer;
+	border: 1px solid transparent;
+    background-color: color.adjust(#000, $alpha: -.7);
+
+	&:hover {
+		border-color: vars.$accent;
+	}
 }
