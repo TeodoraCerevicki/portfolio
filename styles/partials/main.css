@@ -163,6 +163,9 @@ p {
   padding: 16px;
   font-size: 20px;
 }
+.main-nav .item:first-letter {
+  text-transform: uppercase;
+}
 .main-nav .item:hover {
   background-color: #D8573D;
   color: #f1eee6;

@@ -1,5 +1,6 @@
 @use '../../../../modules/variables' as vars;
 @use '../../../../modules/typography/fonts';
+@use '../../../../modules/typography/modification';
 @use '../../../../modules/states/hovers';
 
 @use 'sass:color';
@@ -13,6 +14,7 @@
 
     .item {
         @include fonts.main-bolded-font();
+        @include modification.first-letter-capital();
         padding: vars.$default-gap;
         font-size: vars.$font-size-large;
 
