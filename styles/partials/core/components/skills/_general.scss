@@ -1,0 +1,18 @@
+@use '../../../../modules/variables' as vars;
+
+.skills {
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+    background: {
+        image: url(../../assets/images/background/skills.jpg);
+        repeat: no-repeat;
+        size: 50% 100%;
+    }
+
+    .content-wrapper {
+        width: 50%;
+        padding: vars.$default-gap vars.$extra-large-gap;
+        border-left: 5px solid vars.$accent;
+    }
+}

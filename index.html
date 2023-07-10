@@ -14,10 +14,10 @@
 <body>
     <nav class="main-nav space-between">
         <ul class="align-center">
-            <li><a class="item" href="">Home</a></li>
-            <li><a class="item" href="">About</a></li>
-            <li><a class="item" href="">Experience</a></li>
-            <li><a class="item" href="">Skills</a></li>
+            <li><a class="item" href="#about">About</a></li>
+            <li><a class="item" href="#projects">projects</a></li>
+            <li><a class="item" href="#skills">Skills</a></li>
+            <li><a class="item" href="#contact">contact</a></li>
         </ul>
 
         <ul class="align-center">
@@ -45,12 +45,12 @@
             </h1>
 
             <a href="#about" class="icon-arrow-down scroll-button"></a>
-            <!-- <div class="layout"></div> -->
         </header>
 
         <section id="about" class="about">
+            <h1 class="title">About</h1>
 
-            <div class="item"><img src="assets/images/thea.jpg" class="image" alt="image of Thea"></div>
+            <!-- <div class="item"><img src="assets/images/thea.jpg" class="image" alt="image of Thea"></div> -->
             <div class="item">
                 <h1 class="title">Teodora Čerevicki</h1>
                 <h2 class="title">Frontend developer</h2>
@@ -68,15 +68,49 @@
               </div>
         </section>
 
-        <section class="experience">
+        <section id="projects" class="projects">
+            <h1 class="title">projects</h1>
             <p>over 20 projects, 15 of them are enterpriese</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="content-wrapper">
+                <h1 class="title">skills</h1>
+                <p>Soft once</p>
+
+                <p>there are also hard skills</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <form action="" class="form" onsubmit="sendEmail(); reset(); return false;">
+                <h1 class="title">Get in touch</h1>
+                <input type="text" id="name" class="input-field" placeholder="What is your name?" required>
+                <input type="email" id="email" class="input-field" placeholder="What is your email?" required>
+                <input type="text" id="title" class="input-field" placeholder="Title" required>
+                <textarea name="" id="message" class="textarea" cols="30" rows="10" placeholder="What is your wanna talk about?" required></textarea>
+                <button class="button-accent" type="submit">Send</button>
+            </form>
         </section>
     </main>
 
-    <section class="main-container">
-        <button class="button-primary">Primary</button>
-        <button class="button-accent">Accent</button>
-    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "teodora.cerevicki@gmail.com",
+                Password : "password",
+                To : 'teodora.cerevicki@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : document.getElementById("title").value,
+                Body : "Name: " + document.getElementById("name").value
+                    + "</br> message: " + document.getElementById("message").value
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
 </body>
 
 </html>

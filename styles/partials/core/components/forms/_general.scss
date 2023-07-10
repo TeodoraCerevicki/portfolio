@@ -1,0 +1,33 @@
+@use '../../../../modules/variables' as vars;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background: #fff;
+    padding: vars.$large-gap;
+}
+
+.input-field,
+.textarea {
+    padding: vars.$small-gap;
+    background-color: vars.$background-default;
+    font-size: vars.$font-size-default; 
+}
+
+.input-field {
+    margin-bottom: vars.$default-gap;
+    border: none;
+    border-bottom: 1px solid vars.$primary;
+
+    &:focus {
+        border: none;
+        border-bottom: 2px solid vars.$accent;
+    }
+}
+
+.textarea {
+    &:focus {
+        border: 2px solid vars.$accent;
+    }
+}

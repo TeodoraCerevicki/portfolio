@@ -7,14 +7,15 @@ $accent-light: #EF7459;
 $font-color: #f1eee6;
 $font-color-dark: #17534C;
 
-$background-default: #f1eee6;
+$background-default: #f7f5ef;
 
 $font-size-default: 16px;
 $font-size-large: 20px;
 
 $default-gap: 16px;
-$large-gap: calc($default-gap * 2);
 $small-gap: calc($default-gap / 2);
+$large-gap: calc($default-gap * 2);
+$extra-large-gap: calc($large-gap * 2);
 
 $border-radius: 4px;
 $default-border: 1px solid #424445;

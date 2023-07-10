@@ -1,0 +1,17 @@
+@use '../../../../modules/variables' as vars;
+
+.contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: {
+        image: url(../../assets/images/background/bg-coffee.jpg);
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    .title {
+        margin-bottom: vars.$default-gap;
+    }
+}
