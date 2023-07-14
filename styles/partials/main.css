@@ -2,10 +2,6 @@ img {
   width: 100%;
 }
 
-.main-container {
-  padding: 32px;
-}
-
 html, body {
   height: 100%;
 }
@@ -59,7 +55,7 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
   font-family: "Quicksand SemiBold";
   font-size: 20px;
-  color: #1f2827;
+  color: #212121;
   line-height: 1.25;
 }
 
@@ -73,7 +69,7 @@ li {
 }
 
 p {
-  color: #17534C;
+  color: #212121;
 }
 
 @font-face {
@@ -111,11 +107,11 @@ p {
 }
 
 .button-primary {
-  background-color: #1f2827;
+  background-color: #212121;
   transition: 0.3s;
 }
 .button-primary:hover {
-  background-color: #2b3e3c;
+  background-color: #1f2827;
 }
 
 .button-accent {
@@ -227,7 +223,7 @@ p {
 }
 .paper .text {
   z-index: 1;
-  color: #17534C;
+  color: #212121;
 }
 
 .single-tape,
@@ -366,7 +362,7 @@ p {
 .input-field {
   margin-bottom: 16px;
   border: none;
-  border-bottom: 1px solid #1f2827;
+  border-bottom: 1px solid #212121;
 }
 .input-field:focus {
   border: none;
@@ -375,6 +371,17 @@ p {
 
 .textarea:focus {
   border: 2px solid #D8573D;
+}
+
+.footer {
+  background-color: #212121;
+}
+.footer .item {
+  padding: 16px;
+}
+.footer .item:hover {
+  background-color: #D8573D;
+  color: #f1eee6;
 }
 
 .first-letter-capitalized {
