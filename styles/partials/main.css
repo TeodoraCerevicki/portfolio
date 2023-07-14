@@ -96,6 +96,12 @@ p {
   font-weight: 600;
   src: url("../../assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf");
 }
+.title {
+  font-family: "Caveat";
+  font-size: 32px;
+  color: #D8573D;
+}
+
 .button-accent, .button-primary {
   font-family: "Quicksand SemiBold";
   font-size: 16px;
@@ -179,11 +185,6 @@ p {
 .introduction .image {
   height: 100%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.introduction .title {
-  font-family: "Caveat";
-  font-size: 72px;
-  color: #D8573D;
 }
 
 .pink {
@@ -274,11 +275,6 @@ p {
   transform: rotate(-45deg);
   right: -4vmin;
   top: -3vmin;
-}
-
-.about {
-  width: 50%;
-  margin: 0 auto;
 }
 
 .opening-hero {

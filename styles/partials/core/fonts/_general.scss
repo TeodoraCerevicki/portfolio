@@ -1,0 +1,7 @@
+@use '../../../modules/variables' as vars;
+@use '../../../modules/typography/fonts';
+
+.title {
+    @include fonts.hand-written-font(32px);
+    color: vars.$accent;
+}

@@ -16,8 +16,5 @@
         height: 100%;
         box-shadow: vars.$default-shadow;
     }
-    .title {
-        @include fonts.hand-written-font(72px);
-        color: vars.$accent;
-    }
+    
 }
