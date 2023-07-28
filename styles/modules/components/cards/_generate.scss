@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use 'sass:string';
+
+$patterns-path: '../../assets/images/patterns';
+
+$cards: (
+	projects: (card-color: '#{$patterns-path}/pattern-prism.svg', card-column: '1/3', card-row: '1/5'),
+	design: (card-color: '#{$patterns-path}/pattern-elipsys.svg', card-column: '3/7', card-row: '1/3'),
+	// empty: (card-color: #fff, card-column: '3/5', card-row: '5/3'),
+	mentoring: (card-color: '#{$patterns-path}/pattern-gradient.png', card-column: '5/7', card-row: '3/7'),
+	theme: (card-color: '#{$patterns-path}/pattern-constellation.svg', card-column: '1/5', card-row: '5/7')
+);
+
+@mixin generate() {
+	@each $card, $prop in $cards {
+		$background: map.get($prop, card-color);
+		$column: string.unquote(map.get($prop, card-column));
+		$row: string.unquote(map.get($prop, card-row));
+
+		#{'.' + $card} {
+			grid: {
+				column: $column;
+				row: $row;
+			}
+			background-image: url(#{$background});
+		}
+	}
+}
