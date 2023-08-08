@@ -302,13 +302,15 @@ p {
 }
 
 .skills {
+  background-image: url("../../assets/images/background/skills.jpg");
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-color: transparent;
+  background-position: left top;
   position: relative;
   display: flex;
   justify-content: flex-end;
   height: 100vh;
-  background-image: url(../../assets/images/background/skills.jpg);
-  background-repeat: no-repeat;
-  background-size: 50% 100%;
 }
 .skills .content-wrapper {
   width: 50%;
@@ -422,6 +424,12 @@ p {
   background-image: url(../../assets/images/patterns/pattern-elipsys.svg);
 }
 
+.empty {
+  grid-column: 3/5;
+  grid-row: 5/3;
+  background-image: url(#fff);
+}
+
 .mentoring {
   grid-column: 5/7;
   grid-row: 3/7;
@@ -432,6 +440,20 @@ p {
   grid-column: 1/5;
   grid-row: 5/7;
   background-image: url(../../assets/images/patterns/pattern-constellation.svg);
+}
+
+.experience {
+  position: relative;
+}
+
+.app-ns {
+  background-image: url("../../assets/images/projects/app-ns.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #c6b6e5;
+  background-position: center;
+  height: 100%;
+  width: 100%;
 }
 
 .first-letter-capitalized {

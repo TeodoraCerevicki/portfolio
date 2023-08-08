@@ -6,7 +6,7 @@ $patterns-path: '../../assets/images/patterns';
 $cards: (
 	projects: (pattern: '#{$patterns-path}/pattern-prism.svg', card-column: '1/3', card-row: '1/5'),
 	design: (pattern: '#{$patterns-path}/pattern-elipsys.svg', card-column: '3/7', card-row: '1/3'),
-	// empty: (pattern: #fff, card-column: '3/5', card-row: '5/3'),
+	empty: (pattern: #fff, card-column: '3/5', card-row: '5/3'),
 	mentoring: (pattern: '#{$patterns-path}/pattern-gradient.png', card-column: '5/7', card-row: '3/7'),
 	theme: (pattern: '#{$patterns-path}/pattern-constellation.svg', card-column: '1/5', card-row: '5/7')
 );

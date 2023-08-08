@@ -1,0 +1,12 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/components/backgrounds/generate' as backgrounds;
+
+.experience {
+	position: relative;
+}
+
+.app-ns {
+	@include backgrounds.image('projects/app-ns.jpeg', contain, #c6b6e5, center);
+	height: 100%;
+	width: 100%;
+}

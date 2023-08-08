@@ -1,15 +1,12 @@
 @use '../../../../modules/variables' as vars;
+@use '../../../../modules/components/backgrounds/generate' as backgrounds;
 
 .skills {
+	@include backgrounds.image('background/skills.jpg', 50% 100%);
     position: relative;
     display: flex;
     justify-content: flex-end;
     height: 100vh;
-    background: {
-        image: url(../../assets/images/background/skills.jpg);
-        repeat: no-repeat;
-        size: 50% 100%;
-    }
 
     .content-wrapper {
         width: 50%;
