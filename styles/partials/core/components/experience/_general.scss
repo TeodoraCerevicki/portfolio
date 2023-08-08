@@ -3,10 +3,17 @@
 
 .experience {
 	position: relative;
+	padding: vars.$extra-large-gap 0;
 }
 
-.app-ns {
-	@include backgrounds.image('projects/app-ns.jpeg', contain, #c6b6e5, center);
-	height: 100%;
-	width: 100%;
+.app-favorite {
+	flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+	.icon {
+		color: #01723A;
+		font-size: 50px;
+		transform: rotate(-90deg);	
+	}
 }

@@ -1,28 +1,90 @@
 @use 'sass:map';
 @use 'sass:string';
 
-$patterns-path: '../../assets/images/patterns';
+@use '../backgrounds/generate' as backgrounds;
+
 
 $cards: (
-	projects: (pattern: '#{$patterns-path}/pattern-prism.svg', card-column: '1/3', card-row: '1/5'),
-	design: (pattern: '#{$patterns-path}/pattern-elipsys.svg', card-column: '3/7', card-row: '1/3'),
-	empty: (pattern: #fff, card-column: '3/5', card-row: '5/3'),
-	mentoring: (pattern: '#{$patterns-path}/pattern-gradient.png', card-column: '5/7', card-row: '3/7'),
-	theme: (pattern: '#{$patterns-path}/pattern-constellation.svg', card-column: '1/5', card-row: '5/7')
+	projects: (image: 'patterns/pattern-prism.svg', 
+			card-column: '1/3', 
+			card-row: '1/5'),
+
+	design: (image: 'patterns/pattern-elipsys.svg',  
+			size: cover,
+			color: '#fff', 
+			card-column: '3/7', 
+			card-row: '1/3'),
+
+	app-ns: (image: 'projects/app-ns.jpeg', 
+			size: contain,
+			color: #c6b6e5,
+			position: center,
+			card-column: '3/5', 
+			card-row: '5/3'),
+
+	mentoring: (image: 'patterns/pattern-gradient.png', 
+				card-column: '5/7', 
+				card-row: '3/5'),
+
+	app-entry: (image: 'projects/app-entry.jpeg', 
+				size: contain,
+				color: #9cd3e7,
+				position: center,
+				card-column: '1/3', 
+				card-row: '5/7'),
+
+	theme: (image: 'patterns/pattern-constellation.svg', 
+			size: cover,
+			card-column: '3/7', 
+			card-row: '5/7'),
+
+	app-wa: (image: 'projects/app-wa.jpeg', 
+			size: contain,
+			color: #ebd78e,
+			position: center,
+			card-column: '5/7', 
+			card-row: '7/9'),
+
+	app-nhl: (image: 'projects/app-nhl.jpeg', 
+			size: contain,
+			color: #d1d1d0,
+			position: center,
+			card-column: '1/3', 
+			card-row: '7/9'),
+
+	app-favorite: (
+			image: 'background/favorite.jpg', 
+			size: cover,
+			card-column: '3/5', 
+			card-row: '7/9'),
+
+	app-codepen: (image: 'projects/app-codepen.png', 
+			size: auto,
+			position: center,
+			card-column: '1/5', 
+			card-row: '9/11'),
+
+	app-ebo: (image: 'projects/app-ebo.jpeg', 
+			size: cover,
+			card-column: '5/7', 
+			card-row: '9/11')
 );
 
 @mixin generate() {
 	@each $card, $prop in $cards {
-		$background: map.get($prop, pattern);
+		$image: map.get($prop, image);
+		$size: map.get($prop, size);
+		$color: map.get($prop, color);
+		$position: map.get($prop, position);
 		$column: string.unquote(map.get($prop, card-column));
 		$row: string.unquote(map.get($prop, card-row));
 
 		#{'.' + $card} {
+			@include backgrounds.image($image, $size, $color, $position);
 			grid: {
 				column: $column;
 				row: $row;
 			}
-			background-image: url(#{$background});
 		}
 	}
 }

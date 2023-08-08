@@ -4,7 +4,7 @@
 .skills {
 	@include backgrounds.image('background/skills.jpg', 50% 100%);
     position: relative;
-    display: flex;
+    // display: flex;
     justify-content: flex-end;
     height: 100vh;
 

@@ -2,7 +2,7 @@
 
 $root: '../../assets/images/';
 
-@mixin image($path, $size, $color:transparent, $position: left top) {
+@mixin image($path, $size: cover, $color: transparent, $position: left top) {
 	background: {
         image: url($root + string.unquote($path));
         repeat: no-repeat;
