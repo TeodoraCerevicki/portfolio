@@ -272,11 +272,14 @@ p {
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
+  background-image: url("../../assets/images/background/bg-days.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  background-position: left top;
   position: relative;
   height: 100vh;
   padding-top: 10%;
-  background-image: url(../../assets/images/background/bg-days.jpg);
-  background-size: cover;
 }
 .opening-hero .title {
   color: #D8573D;
@@ -317,14 +320,16 @@ p {
 }
 
 .contact {
+  background-image: url("../../assets/images/background/bg-coffee.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  background-position: left top;
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-image: url(../../assets/images/background/bg-coffee.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .contact .title {
   margin-bottom: 16px;

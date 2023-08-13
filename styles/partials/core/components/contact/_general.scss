@@ -1,16 +1,13 @@
 @use '../../../../modules/variables' as vars;
+@use '../../../../modules/components/backgrounds/generate' as backgrounds;
 
 .contact {
+	@include backgrounds.image('background/bg-coffee.jpg');
     position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background: {
-        image: url(../../assets/images/background/bg-coffee.jpg);
-        repeat: no-repeat;
-        size: cover;
-    }
 
     .title {
         margin-bottom: vars.$default-gap;

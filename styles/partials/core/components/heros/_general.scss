@@ -2,18 +2,14 @@
 @use '../../../../modules/layouts/alignments/items';
 @use '../../../../modules/typography/fonts';
 @use '../../../../modules/states/hovers';
-
-$background-path: '../../assets/images/background';
+@use '../../../../modules/components/backgrounds/generate' as backgrounds;
 
 .opening-hero {
     @include items.fully-align(stretch, center);
+	@include backgrounds.image('background/bg-days.jpg');
     position: relative;
     height: 100vh;
     padding-top: 10%;
-    background: {
-        image: url(#{$background-path}/bg-days.jpg);
-        size: cover;
-    }
 
     .title {
         color: vars.$accent;
