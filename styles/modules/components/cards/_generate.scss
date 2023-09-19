@@ -71,8 +71,22 @@ $cards: (
 
 	app-eu-fund: (image: 'projects/app-eu-fund.png', 
 			size: cover,
+			card-column: '1/3', 
+			card-row: '11/13'),
+
+	app-web-workshop: (image: 'projects/app-web-workshop.png', 
+			size: initial,
+			position: center,
+			color: #7d50fc,
 			card-column: '5/7', 
-			card-row: '9/11')
+			card-row: '9/11'),
+	
+	app-web-workshop-lecturer: (image: 'projects/app-web-workshop.png', 
+			size: initial,
+			position: center,
+			color: #7d50fc,
+			card-column: '3/5', 
+			card-row: '11/13'),
 );
 
 @mixin generate() {
