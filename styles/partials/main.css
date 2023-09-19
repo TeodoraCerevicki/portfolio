@@ -500,14 +500,22 @@ p {
 .app-codepen {
   background-image: url("../../assets/images/projects/app-codepen.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
   background-position: center;
-  grid-column: 1/5;
+  grid-column: 1/3;
   grid-row: 9/11;
 }
 
 .app-ebo {
   background-image: url("../../assets/images/projects/app-ebo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 3/5;
+  grid-row: 9/11;
+}
+
+.app-eu-fund {
+  background-image: url("../../assets/images/projects/app-eu-fund.png");
   background-repeat: no-repeat;
   background-size: cover;
   grid-column: 5/7;
