@@ -2,7 +2,7 @@
 @use '../../../modules/states/hovers';
 
 a {
-	@include hovers.font-hover(vars.$font-color, vars.$accent-light);
+	@include hovers.font-hover(vars.$font-color-light, vars.$accent-light);
 	display: inline-block;
 	text-decoration: none;
 }

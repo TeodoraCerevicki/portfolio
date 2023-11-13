@@ -5,7 +5,7 @@
 @use 'sass:color';
 
 .skills {
-	@include backgrounds.image('background/skills.jpg', cover, #aa9d8a);
+	@include backgrounds.image('background/mobile/skills-hero.jpg', cover, #aa9d8a, bottom);
     position: relative;
     height: 100vh;
     display: flex;
@@ -13,6 +13,10 @@
     border: {
         top: 5px solid vars.$accent;
         bottom: 5px solid vars.$accent;
+    }
+
+    @media screen and (min-width: 1024px) {
+        @include backgrounds.image('background/desktop/skills-hero.jpg', cover, #aa9d8a, bottom);
     }
 
     .skill-group {

@@ -2,7 +2,7 @@
 @use '../../../../modules/components/backgrounds/generate' as backgrounds;
 
 .contact {
-	@include backgrounds.image('background/bg-coffee.jpg');
+	@include backgrounds.image('background/mobile/footer-hero.jpg');
     position: relative;
     height: 100vh;
     display: flex;
@@ -11,5 +11,9 @@
 
     .title {
         margin-bottom: vars.$default-gap;
+    }
+
+    @media screen and (min-width: 1024px) {
+        @include backgrounds.image('background/desktop/footer-hero.jpg');
     }
 }

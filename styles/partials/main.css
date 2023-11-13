@@ -11,10 +11,9 @@ html, body {
 }
 
 body {
-  font-family: "Quicksand Regular";
+  font-family: "Montserrat Regular";
   font-size: 20px;
   margin: 0;
-  background-color: #f7f5ef;
 }
 body * {
   outline-color: transparent;
@@ -56,7 +55,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-family: "Quicksand SemiBold";
+  font-family: "Montserrat SemiBold";
   font-size: 20px;
   color: #212121;
   line-height: 1.25;
@@ -76,37 +75,31 @@ p {
 }
 
 @font-face {
-  font-family: "Caveat";
+  font-family: "Indie_Flower";
   font-style: normal;
   font-weight: 400;
-  src: url("../../assets/fonts/Caveat/Caveat-VariableFont_wght.ttf");
+  src: url("../../assets/fonts/Indie_Flower/IndieFlower-Regular.ttf");
 }
 @font-face {
-  font-family: "Quicksand Regular";
+  font-family: "Montserrat Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("../../assets/fonts/Quicksand/static/Quicksand-Regular.ttf");
+  src: url("../../assets/fonts/Montserrat/static/Montserrat-Regular.ttf");
 }
 @font-face {
-  font-family: "Quicksand Medium";
+  font-family: "Montserrat Medium";
   font-style: normal;
   font-weight: 500;
-  src: url("../../assets/fonts/Quicksand/static/Quicksand-Medium.ttf");
+  src: url("../../assets/fonts/Montserrat/static/Montserrat-Medium.ttf");
 }
 @font-face {
-  font-family: "Quicksand SemiBold";
+  font-family: "Montserrat SemiBold";
   font-style: normal;
   font-weight: 600;
-  src: url("../../assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf");
+  src: url("../../assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf");
 }
-.title {
-  font-family: "Caveat";
-  font-size: 32px;
-  color: #D8573D;
-}
-
 .button-accent, .button-primary {
-  font-family: "Quicksand SemiBold";
+  font-family: "Montserrat SemiBold";
   font-size: 16px;
   padding: 16px 22px;
   transition: 0.2s;
@@ -124,7 +117,7 @@ p {
 }
 
 .button-accent {
-  background-color: #D8573D;
+  background-color: #00cc83;
   transition: 0.3s;
 }
 .button-accent:hover {
@@ -144,15 +137,15 @@ p {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .scroll-button:hover, .scroll-button:hover::before {
-  color: #D8573D;
+  color: #00cc83;
 }
 @media (hover: hover) {
   .scroll-button:hover {
-    color: #D8573D;
+    color: #00cc83;
   }
 }
 .scroll-button:hover {
-  border-color: #D8573D;
+  border-color: #00cc83;
 }
 
 .main-nav {
@@ -163,7 +156,7 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .main-nav .item {
-  font-family: "Quicksand SemiBold";
+  font-family: "Montserrat SemiBold";
   font-size: 16px;
   padding: 16px;
   font-size: 20px;
@@ -172,7 +165,7 @@ p {
   text-transform: uppercase;
 }
 .main-nav .item:hover {
-  background-color: #D8573D;
+  background-color: #00cc83;
   color: #f1eee6;
 }
 
@@ -193,7 +186,7 @@ p {
 .paper {
   position: relative;
   background: linear-gradient(to bottom right, var(--paper-dark), 20%, var(--transparent)), var(--paper-color);
-  min-width: 250px;
+  width: 300px;
   min-height: 130px;
   display: flex;
   align-items: center;
@@ -272,7 +265,7 @@ p {
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
-  background-image: url("../../assets/images/background/bg-days.jpg");
+  background-image: url("../../assets/images/background/mobile/home-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
@@ -280,41 +273,54 @@ p {
   position: relative;
   height: 100vh;
   padding-top: 10%;
+  background-position: center;
+}
+@media screen and (min-width: 1024px) {
+  .opening-hero {
+    background-image: url("../../assets/images/background/desktop/home-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    background-position: left top;
+  }
 }
 .opening-hero .title {
-  color: #D8573D;
+  font-family: "Montserrat SemiBold";
+  font-size: 70px;
+  color: #00cc83;
+  line-height: 1.1;
+}
+.opening-hero .subtitle {
+  font-size: 25px;
+  text-transform: uppercase;
 }
 .opening-hero .text {
-  font-size: 50px;
-  line-height: 1.45;
-  display: inline;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-  background: #fff;
-  padding: 0 16px;
-}
-
-.layout {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  font-family: "Indie_Flower";
+  font-size: 30px;
+  margin-top: 32px;
 }
 
 .skills {
-  background-image: url("../../assets/images/background/skills.jpg");
+  background-image: url("../../assets/images/background/mobile/skills-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #aa9d8a;
-  background-position: left top;
+  background-position: bottom;
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
-  border-top: 5px solid #D8573D;
-  border-bottom: 5px solid #D8573D;
+  border-top: 5px solid #00cc83;
+  border-bottom: 5px solid #00cc83;
+}
+@media screen and (min-width: 1024px) {
+  .skills {
+    background-image: url("../../assets/images/background/desktop/skills-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #aa9d8a;
+    background-position: bottom;
+  }
 }
 .skills .skill-group {
   display: flex;
@@ -327,18 +333,18 @@ p {
 }
 
 .skills-list .item {
-  font-family: "Quicksand SemiBold";
+  font-family: "Montserrat SemiBold";
   font-size: 20px;
   position: relative;
   z-index: 1;
   margin-top: 8px;
   padding: 0 4px;
   text-align: center;
-  background-color: rgba(216, 87, 61, 0.6);
+  background-color: rgba(0, 204, 131, 0.6);
 }
 
 .contact {
-  background-image: url("../../assets/images/background/bg-coffee.jpg");
+  background-image: url("../../assets/images/background/mobile/footer-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
@@ -351,6 +357,15 @@ p {
 }
 .contact .title {
   margin-bottom: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    background-image: url("../../assets/images/background/desktop/footer-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    background-position: left top;
+  }
 }
 
 .form {
@@ -375,11 +390,11 @@ p {
 }
 .input-field:focus {
   border: none;
-  border-bottom: 2px solid #D8573D;
+  border-bottom: 2px solid #00cc83;
 }
 
 .textarea:focus {
-  border: 2px solid #D8573D;
+  border: 2px solid #00cc83;
 }
 
 .footer {
@@ -389,7 +404,7 @@ p {
   padding: 16px;
 }
 .footer .item:hover {
-  background-color: #D8573D;
+  background-color: #00cc83;
   color: #f1eee6;
 }
 
@@ -415,7 +430,7 @@ p {
   padding: 16px;
 }
 .card .title {
-  font-family: "Quicksand SemiBold";
+  font-family: "Montserrat SemiBold";
   font-size: 65px;
   color: #212121;
   text-transform: uppercase;
@@ -574,6 +589,7 @@ p {
 .experience {
   position: relative;
   padding: 64px 0;
+  background: linear-gradient(323deg, rgb(226, 227, 229) 0%, rgb(236, 238, 239) 34%);
 }
 
 .app-favorite {

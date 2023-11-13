@@ -6,31 +6,29 @@
 
 .opening-hero {
     @include items.fully-align(stretch, center);
-	@include backgrounds.image('background/bg-days.jpg');
+	@include backgrounds.image('background/mobile/home-hero.jpg');
     position: relative;
     height: 100vh;
     padding-top: 10%;
+    background-position: center;
+
+    @media screen and (min-width: 1024px) {
+        @include backgrounds.image('background/desktop/home-hero.jpg');
+    }
 
     .title {
+        @include fonts.main-bolded-font(70px);
         color: vars.$accent;
+        line-height: 1.1;
+    }
+
+    .subtitle {
+        font-size: 25px;
+        text-transform: uppercase;
     }
 
     .text {
-
-        font-size: 50px;
-        line-height: 1.45;
-        display: inline;
-        box-decoration-break: clone;
-        background: #fff;
-        padding: 0 vars.$default-gap;
+        @include fonts.hand-written-font(30px);
+        margin-top: vars.$large-gap;
     }
-}
-
-.layout {
-    background-color:rgba(0,0,0, 0.4);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }

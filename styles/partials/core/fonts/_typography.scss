@@ -2,36 +2,36 @@ $fonts-path: '../../assets/fonts';
 
 @font-face {
     font: {
-        family: 'Caveat';
+        family: 'Indie_Flower';
 		style: normal;
 		weight: 400;
     }
-    src: url('#{$fonts-path}/Caveat/Caveat-VariableFont_wght.ttf');
+    src: url('#{$fonts-path}/Indie_Flower/IndieFlower-Regular.ttf');
 }
 
 @font-face {
     font: {
-        family: 'Quicksand Regular';
+        family: 'Montserrat Regular';
 		style: normal;
 		weight: 400;
     }
-    src: url('#{$fonts-path}/Quicksand/static/Quicksand-Regular.ttf');
+    src: url('#{$fonts-path}/Montserrat/static/Montserrat-Regular.ttf');
 }
 
 @font-face {
     font: {
-        family: 'Quicksand Medium';
+        family: 'Montserrat Medium';
 		style: normal;
 		weight: 500;
     }
-    src: url('#{$fonts-path}/Quicksand/static/Quicksand-Medium.ttf');
+    src: url('#{$fonts-path}/Montserrat/static/Montserrat-Medium.ttf');
 }
 
 @font-face {
     font: {
-        family: 'Quicksand SemiBold';
+        family: 'Montserrat SemiBold';
 		style: normal;
 		weight: 600;
     }
-    src: url('#{$fonts-path}/Quicksand/static/Quicksand-SemiBold.ttf');
+    src: url('#{$fonts-path}/Montserrat/static/Montserrat-SemiBold.ttf');
 }

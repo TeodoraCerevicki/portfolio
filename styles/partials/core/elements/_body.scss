@@ -8,7 +8,6 @@ html, body {
 body {
 	@include fonts.main-font(vars.$font-size-large);
 	margin: 0;
-    background-color: vars.$background-default;
 
 	* {
 		outline-color: transparent;

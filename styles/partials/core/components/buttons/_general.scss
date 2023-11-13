@@ -10,7 +10,7 @@
 	transition: .2s;
 	border: 1px solid transparent;
 	line-height: 1.1;
-	color: vars.$font-color;
+	color: vars.$font-color-light;
 }
 
 .button-primary {
@@ -24,7 +24,7 @@
 }
 
 .scroll-button {
-	@include hovers.font-hover(vars.$font-color, vars.$accent);
+	@include hovers.font-hover(vars.$font-color-light, vars.$accent);
 	position: absolute;
 	left: 50%;
     bottom: 4%;

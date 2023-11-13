@@ -8,17 +8,17 @@
 }
 
 @mixin main-font($size: vars.$font-size-default) {
-	@include -font('Quicksand Regular', $size);
+	@include -font('Montserrat Regular', $size);
 }
 
 @mixin main-medium-font($size: vars.$font-size-default) {
-	@include -font('Quicksand Medium', $size);
+	@include -font('Montserrat Medium', $size);
 }
 
 @mixin main-bolded-font($size: vars.$font-size-default) {
-	@include -font('Quicksand SemiBold', $size);
+	@include -font('Montserrat SemiBold', $size);
 }
 
 @mixin hand-written-font($size: vars.$font-size-default) {
-	@include -font('Caveat', $size);
+	@include -font('Indie_Flower', $size);
 }
