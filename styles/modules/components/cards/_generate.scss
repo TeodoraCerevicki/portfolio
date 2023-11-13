@@ -1,19 +1,21 @@
 @use 'sass:map';
 @use 'sass:string';
+@use '../../variables' as vars;
 
 @use '../backgrounds/generate' as backgrounds;
 
 
 $cards: (
-	projects: (image: 'patterns/pattern-prism.svg', 
+	projects: (image: 'patterns/pattern-gradient.png',  
+			size: cover, 
 			card-column: '1/3', 
 			card-row: '1/5'),
 
-	design: (image: 'patterns/pattern-elipsys.svg',  
-			size: cover,
+	design: (image: 'patterns/pattern-gradient.png',  
+			size: cover, 
 			color: '#fff', 
 			card-column: '3/7', 
-			card-row: '1/3'),
+			card-row: '9/11'),
 
 	app-ns: (image: 'projects/app-ns.jpeg', 
 			size: contain,
@@ -22,7 +24,8 @@ $cards: (
 			card-column: '3/5', 
 			card-row: '5/3'),
 
-	mentoring: (image: 'patterns/pattern-gradient.png', 
+	mentoring: (image: 'patterns/pattern-gradient.png',  
+				size: cover,
 				card-column: '5/7', 
 				card-row: '3/5'),
 
@@ -33,7 +36,7 @@ $cards: (
 				card-column: '1/3', 
 				card-row: '5/7'),
 
-	theme: (image: 'patterns/pattern-constellation.svg', 
+	theme: (image: 'patterns/pattern-gradient.png', 
 			size: cover,
 			card-column: '3/7', 
 			card-row: '5/7'),
@@ -67,7 +70,8 @@ $cards: (
 	app-ebo: (image: 'projects/app-ebo.jpeg', 
 			size: cover,
 			card-column: '3/5', 
-			card-row: '9/11'),
+			card-row: '1/3'),
+
 
 	app-eu-fund: (image: 'projects/app-eu-fund.png', 
 			size: cover,
@@ -79,7 +83,7 @@ $cards: (
 			position: center,
 			color: #7d50fc,
 			card-column: '5/7', 
-			card-row: '9/11'),
+			card-row: '1/3'),
 	
 	app-web-workshop-lecturer: (image: 'projects/app-web-workshop.png', 
 			size: initial,
@@ -105,5 +109,13 @@ $cards: (
 				row: $row;
 			}
 		}
+	}
+}
+
+.applications {
+	filter: saturate(0.5);
+	transition: vars.$default-transition;
+	&:hover {
+		filter: none;
 	}
 }
