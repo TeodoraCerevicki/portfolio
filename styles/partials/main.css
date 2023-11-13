@@ -42,11 +42,11 @@ a {
   text-decoration: none;
 }
 a:hover, a:hover::before {
-  color: #EF7459;
+  color: #059c66;
 }
 @media (hover: hover) {
   a:hover {
-    color: #EF7459;
+    color: #059c66;
   }
 }
 
@@ -121,7 +121,7 @@ p {
   transition: 0.3s;
 }
 .button-accent:hover {
-  background-color: #EF7459;
+  background-color: #059c66;
 }
 
 .scroll-button {
@@ -408,14 +408,6 @@ p {
   color: #f1eee6;
 }
 
-.applications {
-  filter: saturate(0.5);
-  transition: 0.3s;
-}
-.applications:hover {
-  filter: none;
-}
-
 .cards-conainer {
   display: grid;
   max-width: 100%;
@@ -426,12 +418,26 @@ p {
 
 .card {
   position: relative;
+  overflow: hidden;
   justify-content: center;
   padding: 16px;
 }
+.card .card-banner {
+  font-family: "Montserrat Medium";
+  font-size: 20px;
+  position: absolute;
+  top: -46px;
+  right: 0;
+  left: 0;
+  padding: 8px;
+  background-color: #e1fbeb;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s;
+}
 .card .title {
   font-family: "Montserrat SemiBold";
-  font-size: 65px;
+  font-size: 55px;
   color: #212121;
   text-transform: uppercase;
 }
@@ -458,6 +464,18 @@ p {
 .card:hover .content {
   opacity: 1;
   transition: 0.3s ease-in-out;
+}
+.card:hover .card-banner {
+  top: 0;
+  transition: 0.3s;
+}
+
+.applications {
+  filter: saturate(0.6);
+  transition: 0.3s;
+}
+.applications:hover {
+  filter: saturate(0.4);
 }
 
 .projects {

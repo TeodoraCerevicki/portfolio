@@ -111,11 +111,3 @@ $cards: (
 		}
 	}
 }
-
-.applications {
-	filter: saturate(0.5);
-	transition: vars.$default-transition;
-	&:hover {
-		filter: none;
-	}
-}

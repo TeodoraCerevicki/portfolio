@@ -41,5 +41,5 @@
 }
 
 @mixin accent-background-hover() {
-	@include background-hover(vars.$accent, vars.$accent-light);
+	@include background-hover(vars.$accent, vars.$accent-dark);
 }

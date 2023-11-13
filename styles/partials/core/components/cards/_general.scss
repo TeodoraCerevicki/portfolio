@@ -16,11 +16,25 @@
 
 .card {
     position: relative;
+	overflow: hidden;
 	justify-content: center;
 	padding: vars.$default-gap;
 
+	.card-banner {
+		@include fonts.main-medium-font(20px);
+		position: absolute;
+		top: -46px;
+		right: 0;
+		left: 0;
+		padding: vars.$small-gap;
+		background-color: #e1fbeb;
+		text-transform: uppercase;
+		text-align: center;
+		transition: vars.$default-transition;
+	}
+
 	.title {
-		@include fonts.main-bolded-font(65px);
+		@include fonts.main-bolded-font(55px);
 		color: vars.$primary;
 		text-transform: uppercase;
 	}
@@ -52,6 +66,19 @@
 			opacity: 1;
 			transition: vars.$default-transition ease-in-out;
 		}
+
+		.card-banner {
+			top: 0;
+			transition: vars.$default-transition;
+		}
+	}
+}
+
+.applications {
+	filter: saturate(0.6);
+	transition: vars.$default-transition;
+	&:hover {
+		filter: saturate(0.4);
 	}
 }
 
