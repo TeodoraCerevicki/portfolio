@@ -103,12 +103,15 @@ $cards: (
 		$column: string.unquote(map.get($prop, card-column));
 		$row: string.unquote(map.get($prop, card-row));
 
+		#{'.' + $card} {
+			grid: {
+				column: $column;
+				row: $row;
+			}
+		}
+
 		@if($image == 'false') {
 			#{'.' + $card} {
-				grid: {
-					column: $column;
-					row: $row;
-				}
 				background: vars.$gradient-default;
 			}
 		}
@@ -116,11 +119,6 @@ $cards: (
 		@else {
 			#{'.' + $card} {
 				@include backgrounds.image($image, $size, $color, $position);
-				
-				grid: {
-					column: $column;
-					row: $row;
-				}
 			}
 		}
 	}
