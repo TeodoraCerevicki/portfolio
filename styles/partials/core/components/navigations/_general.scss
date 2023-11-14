@@ -12,6 +12,10 @@
     z-index: 1;
     background-color: color.adjust(#000, $alpha: -.4);
 
+    .logo {
+        height: 44px;
+    }
+
     .item {
         @include fonts.main-bolded-font();
         @include modification.first-letter-capital();

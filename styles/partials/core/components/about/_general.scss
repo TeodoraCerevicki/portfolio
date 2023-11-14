@@ -1,0 +1,8 @@
+$profile-image-size: 450px;
+
+.about-image {
+    width: $profile-image-size;
+    height: $profile-image-size;
+    overflow: hidden;
+    border-radius: 36% 64% 35% 65% / 55% 31% 69% 45%;
+}
