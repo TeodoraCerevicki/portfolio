@@ -4,8 +4,9 @@
     display: flex;
     flex-direction: column;
     width: 500px;
-    background: #fff;
     padding: vars.$large-gap;
+    box-shadow: vars.$default-shadow;
+    background: #fff;
 }
 
 .input-field,

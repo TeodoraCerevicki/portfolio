@@ -20,17 +20,21 @@
 	justify-content: center;
 	padding: vars.$default-gap;
 
-	.card-banner {
-		@include fonts.main-medium-font(20px);
+	.card-banner, .content {
+		display: none;
 		position: absolute;
-		top: -46px;
+		top: 0;
 		right: 0;
 		left: 0;
+		box-shadow: vars.$default-shadow;
+	}
+
+	.card-banner {
+		@include fonts.main-medium-font(20px);
 		padding: vars.$small-gap;
 		background-color: #e1fbeb;
 		text-transform: uppercase;
 		text-align: center;
-		transition: vars.$default-transition;
 	}
 
 	.title {
@@ -40,17 +44,10 @@
 	}
 
 	.content {
-		opacity: 0;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 90%;
-		border-radius: 4px;
+		bottom: 0;
 		padding: 12px;
-		box-shadow: vars.$default-shadow;
 		background-color: #fff;
-		transition: vars.$default-transition ease-in;
+		font-size: 19px;
 	}
 
 	.link {
@@ -62,16 +59,12 @@
 		.title {
 			opacity: 0;
 		}
-		.content {
-			opacity: 1;
-			transition: vars.$default-transition ease-in-out;
-		}
-
-		.card-banner {
-			top: 0;
-			transition: vars.$default-transition;
-		}
 	}
+
+	.open {
+		display: block;
+	}
+
 }
 
 .applications {
