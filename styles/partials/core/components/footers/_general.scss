@@ -1,7 +1,12 @@
 @use '../../../../modules/variables' as vars;
+@use '../../../../modules/layouts/alignments/items';
 
 .footer {
     background-color: vars.$primary;
+
+    .footer-list {
+        @include items.align-absolute-center();
+    }
 
     .item {
         padding: vars.$default-gap;

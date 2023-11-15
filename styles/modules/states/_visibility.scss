@@ -2,14 +2,14 @@
 	@include -toggle-state($mobile-state, none);
 }
 
-@mixin show-on-tablet($tablet-state: block) {
-	@include -toggle-state(none, $tablet-state);
+@mixin show-on-desktop($desktop-state: block) {
+	@include -toggle-state(none, $desktop-state);
 }
 
-@mixin -toggle-state($mobile-state, $tablet-state) {
+@mixin -toggle-state($mobile-state, $desktop-state) {
 	display: $mobile-state;
 
-	@include breakpoints.apply-on-tablet() {
-		display: $tablet-state;
-	}
+	@media screen and (min-width: 1024px) {
+		display: $desktop-state;
+    }
 }

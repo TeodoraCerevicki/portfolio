@@ -1,3 +1,9 @@
-.hidden {
+@use '../../../modules/states/visibility';
+
+.hide {
 	display: none;
+}
+
+.hide-on-desktop {
+	@include visibility.show-on-mobile();
 }

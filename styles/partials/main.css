@@ -2,10 +2,6 @@ img {
   width: 100%;
 }
 
-.hide {
-  display: none;
-}
-
 html, body {
   height: 100%;
 }
@@ -17,6 +13,9 @@ body {
 }
 body * {
   outline-color: transparent;
+}
+body.open-menu {
+  overflow: hidden;
 }
 
 body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, footer, article, aside, ul, li {
@@ -149,27 +148,111 @@ p {
 }
 
 .main-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
+  top: 0;
   right: 0;
+  bottom: unset;
   left: 0;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
 }
-.main-nav .logo {
-  height: 44px;
+.main-nav .mobile-nav-item,
+.main-nav .social-nav {
+  border-top: 2px solid #059c66;
+}
+@media screen and (min-width: 1024px) {
+  .main-nav .mobile-nav-item,
+  .main-nav .social-nav {
+    border-top: none;
+  }
+}
+.main-nav .mobile-nav-item {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .main-nav .mobile-nav-item {
+    width: unset;
+  }
 }
 .main-nav .item {
   font-family: "Montserrat SemiBold";
   font-size: 16px;
   padding: 16px;
   font-size: 20px;
+  color: #f1eee6;
 }
 .main-nav .item:first-letter {
   text-transform: uppercase;
 }
 .main-nav .item:hover {
   background-color: #00cc83;
-  color: #f1eee6;
+}
+.main-nav .toggle-icon,
+.main-nav .logo-wrapper {
+  height: 62px;
+}
+.main-nav .logo-wrapper {
+  padding: 6px 16px;
+}
+.main-nav .logo {
+  height: 44px;
+}
+.main-nav .nav-wrapper {
+  position: absolute;
+  top: 62px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .main-nav .nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+    flex: 2 1 0;
+    height: unset;
+    background-color: unset;
+    text-align: unset;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-nav .section-nav,
+  .main-nav .social-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-nav .section-nav {
+    flex: 2 1 0;
+  }
+}
+.main-nav .social-nav {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .main-nav .social-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .opening-hero {
@@ -314,6 +397,13 @@ p {
 
 .footer {
   background-color: #212121;
+}
+.footer .footer-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .footer .item {
   padding: 16px;
@@ -591,7 +681,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .align-right {
@@ -622,6 +712,15 @@ p {
   cursor: not-allowed;
 }
 
-.hidden {
+.hide {
   display: none;
+}
+
+.hide-on-desktop {
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  .hide-on-desktop {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

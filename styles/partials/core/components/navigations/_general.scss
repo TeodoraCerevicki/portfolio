@@ -2,18 +2,35 @@
 @use '../../../../modules/typography/fonts';
 @use '../../../../modules/typography/modification';
 @use '../../../../modules/states/hovers';
+@use '../../../../modules/layouts/alignments/items';
+@use '../../../../modules/layouts/positions/absolute';
+@use '../../../../modules/layouts/positions/fixed';
 
 @use 'sass:color';
 
-.main-nav {
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    background-color: color.adjust(#000, $alpha: -.4);
+$background-dark: color.adjust(#000, $alpha: -.3);
 
-    .logo {
-        height: 44px;
+.main-nav {
+	@include items.fully-align(center, space-between);
+    @include fixed.position-unset(0, 0, unset, 0);
+    z-index: 1;
+    background-color: $background-dark;
+
+    .mobile-nav-item,
+    .social-nav {
+        border-top: vars.$border-accent;
+
+        @media screen and (min-width: 1024px) {
+            border-top: none;
+        }
+    }
+
+    .mobile-nav-item {
+        width: 100%;
+
+        @media screen and (min-width: 1024px) {
+            width: unset;
+        }
     }
 
     .item {
@@ -21,10 +38,62 @@
         @include modification.first-letter-capital();
         padding: vars.$default-gap;
         font-size: vars.$font-size-large;
+        color: vars.$font-color-light;
 
         &:hover {
             background-color: vars.$accent;
-            color: vars.$font-color-light;
+        }
+    }
+
+    .toggle-icon,
+    .logo-wrapper {
+        height: 62px;
+    }
+
+    .logo-wrapper {
+        padding: 6px 16px;
+    }
+
+    .logo {
+        height: 44px;
+    }
+
+    .nav-wrapper {
+        @include absolute.position-unset(62px, 0, 0, 0);
+        height: 100vh;
+        background-color: color.adjust(#000, $alpha: -.1);
+        text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            @include items.fully-align(center, space-between);
+            position: static;
+            flex: 2 1 0;
+            height: unset;
+            background-color: unset;
+            text-align: unset;
+        }
+    
+    }
+
+    .section-nav,
+    .social-nav {
+        @media screen and (min-width: 1024px) {
+            @include items.align-center();
+        }
+    }
+
+    .section-nav {
+        @media screen and (min-width: 1024px) {
+            flex: 2 1 0;
+        }
+    }
+
+    .social-nav {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width: 1024px) {
+            @include items.align-center();
         }
     }
 }

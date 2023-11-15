@@ -12,6 +12,10 @@ body {
 	* {
 		outline-color: transparent;
 	}
+
+	&.open-menu {
+		overflow: hidden;
+	}
 }
 
 body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, footer, article, aside, ul, li {
