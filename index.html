@@ -287,16 +287,17 @@
         </div>
 
         <section id="contact" class="contact border-top-accent">
-            <form action="" class="form" onsubmit="sendEmail(); reset(); return false;">
+            <form id="contact-form" class="form">
                 <header>
                     <h1 class="subtitle">Let's</h1>
                     <h2 class="title">Get in touch</h2>
                 </header>
                 
-                <input type="text" id="name" class="input-field" placeholder="What is your name?" required>
-                <input type="email" id="email" class="input-field" placeholder="What is your email?" required>
-                <input type="text" id="title" class="input-field" placeholder="Title of our topic" required>
-                <textarea name="" id="message" class="textarea" cols="30" rows="10" placeholder="Description of our topic" required></textarea>
+                <input type="hidden" name="contact_number">
+                <input name="user_name" type="text" id="name" class="input-field" placeholder="What is your name?" required>
+                <input name="user_email" type="email" id="email" class="input-field" placeholder="What is your email?" required>
+                <input name="user_subject" type="text" id="title" class="input-field" placeholder="Title of our topic" required>
+                <textarea name="message" id="message" class="textarea" cols="30" rows="10" placeholder="Description of our topic" required></textarea>
                 <button class="button-accent" type="submit">Send</button>
             </form>
 
@@ -330,24 +331,30 @@
     </footer>
 
     <!-- JS  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "teodora.cerevicki@gmail.com",
-                Password : "password",
-                To : 'teodora.cerevicki@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : document.getElementById("title").value,
-                Body : "Name: " + document.getElementById("name").value
-                    + "</br> message: " + document.getElementById("message").value
-            }).then(
-            message => alert(message)
-            );
-        }
+
+    
+    
+    <!-- <script type="text/javascript">
+        (function() {
+            emailjs.init('xrZMsaaPoq5UDCocy');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('service_8agma79', 'template_zsen166', '#contact-form')
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        } -->
     </script>
 </body>
 

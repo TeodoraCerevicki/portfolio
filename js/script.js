@@ -24,3 +24,20 @@ $(function(){
         $('.js-read-more-btn-text, .js-read-more-text').toggleClass('open');
     });
 });
+
+(function() {
+    emailjs.init('xrZMsaaPoq5UDCocy');
+})();
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        this.contact_number.value = Math.random() * 100000 | 0;
+        emailjs.sendForm('service_8agma79', 'template_zsen166', '#contact-form')
+            .then(function() {
+                console.log('SUCCESS!');
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
+}
