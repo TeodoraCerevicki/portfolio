@@ -1,0 +1,5 @@
+@use '../../../modules/variables' as vars;
+
+.border-top-accent {
+    border-top: 5px solid vars.$accent;
+}

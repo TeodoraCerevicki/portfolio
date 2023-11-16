@@ -312,8 +312,6 @@ p {
   height: 100vh;
   display: flex;
   align-items: center;
-  border-top: 5px solid #00cc83;
-  border-bottom: 5px solid #00cc83;
 }
 @media screen and (min-width: 1024px) {
   .skills {
@@ -697,15 +695,87 @@ p {
   }
 }
 
+.about {
+  position: relative;
+  padding: 64px 0;
+}
+.about .subtitle {
+  font-family: "Indie_Flower";
+  font-size: 30px;
+}
+.about .title {
+  font-family: "Montserrat SemiBold";
+  font-size: 50px;
+  color: #00cc83;
+  line-height: 1.1;
+}
+.about .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+@media screen and (min-width: 700px) {
+  .about .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.about .text-wrapper {
+  order: 1;
+}
+.about .image-wrapper {
+  order: 0;
+  margin-left: auto;
+  margin-right: 0;
+}
+@media screen and (min-width: 700px) {
+  .about .text-wrapper, .about .image-wrapper {
+    margin-left: unset;
+    margin-right: unset;
+    order: unset;
+  }
+}
+.about .desc {
+  margin-top: 16px;
+}
+.about .read-more-text,
+.about .read-more-btn-text {
+  display: none;
+}
+.about .read-more-btn {
+  width: 140px;
+  margin-top: 32px;
+}
+.about .read-more-btn .text {
+  display: none;
+}
+.about .open {
+  display: block;
+}
+
 .about-image {
   width: 250px;
   height: 250px;
   overflow: hidden;
   border-radius: 36% 64% 35% 65%/55% 31% 69% 45%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 700px) {
   .about-image {
-    width: 450px;
+    margin-left: 32px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-image {
+    min-width: 350px;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-image {
+    min-width: 450px;
     height: 450px;
   }
 }
@@ -776,4 +846,8 @@ p {
   .hide-on-desktop {
     display: none;
   }
+}
+
+.border-top-accent {
+  border-top: 5px solid #00cc83;
 }/*# sourceMappingURL=main.css.map */

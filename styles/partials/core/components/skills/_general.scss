@@ -11,10 +11,6 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    border: {
-        top: 5px solid vars.$accent;
-        bottom: 5px solid vars.$accent;
-    }
 
     @media screen and (min-width: 1024px) {
         @include backgrounds.image('background/desktop/skills-hero.jpg', cover, #aa9d8a, bottom);
