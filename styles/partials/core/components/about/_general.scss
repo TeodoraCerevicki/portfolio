@@ -1,8 +1,14 @@
-$profile-image-size: 450px;
+$profile-image-size-small: 250px;
+$profile-image-size-large: 450px;
 
 .about-image {
-    width: $profile-image-size;
-    height: $profile-image-size;
+    width: $profile-image-size-small;
+    height: $profile-image-size-small;
     overflow: hidden;
     border-radius: 36% 64% 35% 65% / 55% 31% 69% 45%;
+
+    @media screen and (min-width: 1024px) {
+        width: $profile-image-size-large;
+        height: $profile-image-size-large;
+    }
 }

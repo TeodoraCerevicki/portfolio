@@ -8,6 +8,7 @@
 }
 
 .app-favorite {
+	display: none;
 	flex-direction: row;
     justify-content: left;
     align-items: center;
@@ -17,4 +18,8 @@
 		font-size: 50px;
 		transform: rotate(-90deg);	
 	}
+
+	@media screen and (min-width: 1024px) {
+		display: flex;
+    }
 }
