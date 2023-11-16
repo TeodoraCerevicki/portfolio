@@ -1,6 +1,8 @@
 @use '../../../../modules/variables' as vars;
+@use '../../../../modules/components/headers/generate' as headers;
 
 .form {
+    @include headers.default(20px, 20px);
     display: flex;
     flex-direction: column;
     width: 500px;

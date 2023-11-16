@@ -1,0 +1,19 @@
+@use '../../variables' as vars;
+@use '../../typography/fonts';
+
+@mixin default ($subtitle-font-size, $title-font-size) {
+    .subtitle {
+        @include fonts.hand-written-font($subtitle-font-size);
+    }
+
+    .title {
+        @include fonts.main-bolded-font($title-font-size);
+        color: vars.$accent;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        @include fonts.main-bolded-font($subtitle-font-size);
+        text-transform: uppercase;
+    }
+}

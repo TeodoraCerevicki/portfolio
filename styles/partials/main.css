@@ -276,6 +276,21 @@ p {
   padding-top: 110px;
   background-position: center;
 }
+.opening-hero .subtitle {
+  font-family: "Indie_Flower";
+  font-size: 25px;
+}
+.opening-hero .title {
+  font-family: "Montserrat SemiBold";
+  font-size: 70px;
+  color: #00cc83;
+  line-height: 1.1;
+}
+.opening-hero .hero-subtitle {
+  font-family: "Montserrat SemiBold";
+  font-size: 25px;
+  text-transform: uppercase;
+}
 @media screen and (min-width: 1024px) {
   .opening-hero {
     background-image: url("../../assets/images/background/desktop/home-hero.jpg");
@@ -284,16 +299,6 @@ p {
     background-color: transparent;
     background-position: left top;
   }
-}
-.opening-hero .title {
-  font-family: "Montserrat SemiBold";
-  font-size: 70px;
-  color: #00cc83;
-  line-height: 1.1;
-}
-.opening-hero .subtitle {
-  font-size: 25px;
-  text-transform: uppercase;
 }
 .opening-hero .text {
   font-family: "Indie_Flower";
@@ -306,7 +311,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #aa9d8a;
-  background-position: bottom;
+  background-position: center;
   z-index: 0;
   position: relative;
   height: 100vh;
@@ -319,7 +324,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #aa9d8a;
-    background-position: bottom;
+    background-position: center;
   }
 }
 .skills .skill-group {
@@ -327,9 +332,20 @@ p {
   flex-direction: column;
   align-items: center;
 }
+.skills .skill-group .subtitle {
+  font-family: "Indie_Flower";
+  font-size: 25px;
+}
 .skills .skill-group .title {
-  padding-bottom: 16px;
-  font-size: 42px;
+  font-family: "Montserrat SemiBold";
+  font-size: 40px;
+  color: #00cc83;
+  line-height: 1.1;
+}
+.skills .skill-group .hero-subtitle {
+  font-family: "Montserrat SemiBold";
+  font-size: 25px;
+  text-transform: uppercase;
 }
 
 .skills-list .item {
@@ -376,6 +392,21 @@ p {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background: #fff;
 }
+.form .subtitle {
+  font-family: "Indie_Flower";
+  font-size: 20px;
+}
+.form .title {
+  font-family: "Montserrat SemiBold";
+  font-size: 20px;
+  color: #00cc83;
+  line-height: 1.1;
+}
+.form .hero-subtitle {
+  font-family: "Montserrat SemiBold";
+  font-size: 20px;
+  text-transform: uppercase;
+}
 
 .input-field,
 .textarea {
@@ -420,11 +451,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 32px;
 }
 @media screen and (min-width: 1024px) {
   .cards-conainer {
     display: grid;
     max-width: 100%;
+    margin-top: 64px;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(150px, auto);
     grid-gap: 16px;
@@ -677,6 +710,26 @@ p {
   padding: 64px 0;
   background: linear-gradient(323deg, rgb(226, 227, 229) 0%, rgb(236, 238, 239) 34%);
 }
+.experience .header .subtitle {
+  font-family: "Indie_Flower";
+  font-size: 30px;
+}
+.experience .header .title {
+  font-family: "Montserrat SemiBold";
+  font-size: 50px;
+  color: #00cc83;
+  line-height: 1.1;
+}
+.experience .header .hero-subtitle {
+  font-family: "Montserrat SemiBold";
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.experience .header .desc {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 32px;
+}
 
 .app-favorite {
   display: none;
@@ -708,6 +761,11 @@ p {
   font-size: 50px;
   color: #00cc83;
   line-height: 1.1;
+}
+.about .hero-subtitle {
+  font-family: "Montserrat SemiBold";
+  font-size: 30px;
+  text-transform: uppercase;
 }
 .about .content {
   display: flex;

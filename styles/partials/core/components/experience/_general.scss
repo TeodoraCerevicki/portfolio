@@ -1,10 +1,21 @@
 @use '../../../../modules/variables' as vars;
 @use '../../../../modules/components/backgrounds/generate' as backgrounds;
+@use '../../../../modules/components/headers/generate' as headers;
 
 .experience {
 	position: relative;
 	padding: vars.$extra-large-gap 0;
     background: vars.$page-background;
+
+	.header {
+		@include headers.default(30px, 50px);
+
+		.desc {
+			width: 100%;
+			max-width: 700px;
+			margin-top: vars.$large-gap;
+		}
+	}
 }
 
 .app-favorite {

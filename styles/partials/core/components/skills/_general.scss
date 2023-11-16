@@ -1,11 +1,12 @@
 @use '../../../../modules/variables' as vars;
 @use '../../../../modules/components/backgrounds/generate' as backgrounds;
 @use '../../../../modules/typography/fonts';
+@use '../../../../modules/components/headers/generate' as headers;
 
 @use 'sass:color';
 
 .skills {
-	@include backgrounds.image('background/mobile/skills-hero.jpg', cover, #aa9d8a, bottom);
+	@include backgrounds.image('background/mobile/skills-hero.jpg', cover, #aa9d8a, center);
     z-index: 0;
     position: relative;
     height: 100vh;
@@ -13,18 +14,14 @@
     align-items: center;
 
     @media screen and (min-width: 1024px) {
-        @include backgrounds.image('background/desktop/skills-hero.jpg', cover, #aa9d8a, bottom);
+        @include backgrounds.image('background/desktop/skills-hero.jpg', cover, #aa9d8a, center);
     }
 
     .skill-group {
+        @include headers.default(25px, 40px);
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        .title {
-            padding-bottom: vars.$default-gap;
-            font-size: 42px;
-        }
     }
 }
 

@@ -54,7 +54,7 @@
     <main>
         <header id="hero" class="opening-hero">
             <div class="container">
-                <h1 class="subtitle">Frontend developer</h1>
+                <h1 class="hero-subtitle">Frontend developer</h1>
                 <h2 class="title">Teodora Čerevicki</h2>
                 <p class="text">
                     Hi there! <br>
@@ -106,6 +106,17 @@
 
         <section id="experience" class="experience border-top-accent">
             <div class="container">
+                <header class="header">
+                    <h1 class="subtitle">projects, knowledge,</h1>
+                    <h2 class="title">Experience</h2>
+                    <p class="desc">
+                        Welcome to the section where I showcase a collection of projects 
+                        I've had the privilege to work on. From my professional endeavors 
+                        to side activities and cherished themes, here's a glimpse into the 
+                         aspects that define my journey
+                    </p>
+                </header>
+
                 <div class="cards-conainer">
                     <section class="card projects js-card">
                         <h2 class="title">projects</h2>
@@ -237,7 +248,10 @@
             <div class="container">
                 <div class="row">
                     <section class="col-12 col-md-6 skill-group">
-                        <h1 class="title">Hard skills</h1>
+                        <header>
+                            <h1 class="subtitle">here we have</h1>
+                            <h2 class="title">Hard skills</h2>
+                        </header>
 
                         <ul class="skills-list">
                             <li class="item">HTML</li>
@@ -251,7 +265,10 @@
                     </section>
                     
                     <section class="col-12 col-md-6 skill-group">
-                        <h1 class="title">Soft skills</h1>
+                        <header>
+                            <h1 class="subtitle">and some</h1>
+                            <h2 class="title">Soft skills</h2>
+                        </header>
 
                         <ul class="skills-list">
                             <li class="item">Client Communication</li>
@@ -271,11 +288,15 @@
 
         <section id="contact" class="contact border-top-accent">
             <form action="" class="form" onsubmit="sendEmail(); reset(); return false;">
-                <h1 class="title">Get in touch</h1>
+                <header>
+                    <h1 class="subtitle">Let's</h1>
+                    <h2 class="title">Get in touch</h2>
+                </header>
+                
                 <input type="text" id="name" class="input-field" placeholder="What is your name?" required>
                 <input type="email" id="email" class="input-field" placeholder="What is your email?" required>
-                <input type="text" id="title" class="input-field" placeholder="Title" required>
-                <textarea name="" id="message" class="textarea" cols="30" rows="10" placeholder="What is your wanna talk about?" required></textarea>
+                <input type="text" id="title" class="input-field" placeholder="Title of our topic" required>
+                <textarea name="" id="message" class="textarea" cols="30" rows="10" placeholder="Description of our topic" required></textarea>
                 <button class="button-accent" type="submit">Send</button>
             </form>
 

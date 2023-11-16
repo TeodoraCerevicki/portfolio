@@ -1,24 +1,16 @@
 @use '../../../../modules//variables' as vars;
 @use '../../../../modules/layouts/alignments/items';
 @use '../../../../modules/typography/fonts';
+@use '../../../../modules/components/headers/generate' as headers;
 
 $profile-image-size-small: 250px;
 $profile-image-size-medium: 350px;
 $profile-image-size-large: 450px;
 
 .about {
+    @include headers.default(30px, 50px);
     position: relative;
     padding: vars.$extra-large-gap 0;
-
-    .subtitle {
-        @include fonts.hand-written-font(30px);
-    }
-
-    .title {
-        @include fonts.main-bolded-font(50px);
-        color: vars.$accent;
-        line-height: 1.1;
-    }
 
     .content {
         display: flex;
