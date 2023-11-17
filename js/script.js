@@ -36,8 +36,15 @@ window.onload = function() {
         emailjs.sendForm('service_8agma79', 'template_zsen166', '#contact-form')
             .then(function() {
                 console.log('SUCCESS!');
+                $('.status-success').slideToggle('open');
+                
             }, function(error) {
                 console.log('FAILED...', error);
-            });
+                $('.status-error').slideToggle('open');
+        });
+        
+        setTimeout(function(){
+            $('.status-message').remove();
+        }, 10000);
     });
 }

@@ -1,0 +1,34 @@
+@use '../../../modules/variables' as vars;
+@use '../../../modules/typography/fonts';
+
+.status-message {
+    @include fonts.main-medium-font(18px);
+    display: none;
+    margin-top: vars.$default-gap;
+    font-size: 18px;
+    &::before {
+        font-family: "icomoon";
+        font-size: 24px;
+        position: relative;
+        top: 4px;
+        margin-right: 8px;
+    }
+
+    &.status-success {
+        color: vars.$accent-dark;
+        &::before {
+            content: '\e908';
+        }
+    }
+
+    &.status-error {
+        color: #E54141;
+        &::before {
+            content: '\e907';
+        }
+    }
+
+    &.open {
+        display: block;
+    }
+}
