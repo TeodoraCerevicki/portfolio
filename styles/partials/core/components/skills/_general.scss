@@ -9,19 +9,26 @@
 	@include backgrounds.image('background/mobile/skills-hero.jpg', cover, #aa9d8a, center);
     z-index: 0;
     position: relative;
-    height: 100vh;
     display: flex;
     align-items: center;
+    padding: 64px 0;
 
     @media screen and (min-width: 1024px) {
         @include backgrounds.image('background/desktop/skills-hero.jpg', cover, #aa9d8a, center);
+        height: 100vh;
     }
 
     .skill-group {
         @include headers.default(25px, 40px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: vars.$large-gap 0 vars.$large-gap vars.$large-gap;
+        background-color: color.adjust(vars.$background-default, $alpha: -.3);
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: vars.$extra-large-gap 0;
+        }
     }
 }
 
@@ -31,8 +38,18 @@
         position: relative;
         z-index: 1;
         margin-top: vars.$small-gap;
+        margin-left: 28px;
         padding: 0 4px;
-        text-align: center;
-        background-color: color.adjust(vars.$accent, $alpha: -.4);
+
+        &::before {
+            content: '\e908';
+            font-family: "icomoon";
+            font-size: 24px;
+            position: absolute;
+            top: -3px;
+            left: -28px;
+            margin-right: 8px;
+            color: vars.$accent-dark;
+        }
     }
 }
