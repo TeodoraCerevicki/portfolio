@@ -1,14 +1,16 @@
 @use '../../../../modules/variables' as vars;
 @use '../../../../modules/typography/fonts';
-@use '../../../../modules/states/hovers';
 @use '../../../../modules/components/cards/generate' as cards;
+@use '../../../../modules/layouts/positions/absolute';
 
+@use 'sass:color';
 
 .cards-conainer {
+	position: relative;
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-	margin-top: vars.$large-gap;
+	margin-top: 112px;
 
 	@media screen and (min-width: 1024px) {
 		display: grid;
@@ -27,9 +29,7 @@
 	overflow: hidden;
 	width: 100%;
 	height: 300px;
-	justify-content: center;
 	margin-top: vars.$default-gap;
-	padding: vars.$default-gap;
 
 	@media screen and (min-width: 1024px) {
 		width: unset;
@@ -37,50 +37,19 @@
 		margin-top: 0;
     }
 
-	.card-banner, .content {
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		box-shadow: vars.$default-shadow;
-	}
-
 	.card-banner {
-		@include fonts.main-medium-font(20px);
+        @include absolute.position-unset(unset, 0, 0, 0);
+		@include fonts.main-medium-font(16px);
 		padding: vars.$small-gap;
-		background-color: #e1fbeb;
+        background-color: color.adjust(vars.$primary, $alpha: -.3);
+		color: vars.$font-color-light;
 		text-transform: uppercase;
-		text-align: center;
-
-		@media screen and (min-width: 1024px) {
-			display: none;
-		}
-	}
-
-	.title {
-		@include fonts.main-bolded-font(55px);
-		color: vars.$primary;
-		text-transform: uppercase;
-	}
-
-	.content {
-		display: none;
-		bottom: 0;
-		overflow-y: auto;
-		padding: 12px;
-		background-color: #fff;
-		font-size: 19px;
 	}
 
 	.link {
 		width: 100%;
 		height: 100%;
 	}
-
-	.open {
-		display: block;
-	}
-
 }
 
 .applications {

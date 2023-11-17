@@ -6,78 +6,18 @@
 
 
 $cards: (
-	projects: (image: 'false',  
-			size: cover, 
+	
+	app-ebo: (image: 'projects/app-ebo.jpeg', 
+			size: cover,
 			card-column: '1/3', 
-			card-row: '1/5'),
-
-	design: (
-			image: 'false',
-			size: cover, 
-			color: '#fff', 
-			card-column: '3/7', 
-			card-row: '9/11'),
+			card-row: '1/3'),
 
 	app-ns: (image: 'projects/app-ns.jpeg', 
 			size: contain,
 			color: #c6b6e5,
 			position: center,
 			card-column: '3/5', 
-			card-row: '5/3'),
-
-	mentoring: (image: 'false',  
-				size: cover,
-				card-column: '5/7', 
-				card-row: '3/5'),
-
-	app-entry: (image: 'projects/app-entry.jpeg', 
-				size: contain,
-				color: #9cd3e7,
-				position: center,
-				card-column: '1/3', 
-				card-row: '5/7'),
-
-	theme: (image: 'false', 
-			size: cover,
-			card-column: '3/7', 
-			card-row: '5/7'),
-
-	app-wa: (image: 'projects/app-wa.jpeg', 
-			size: contain,
-			color: #ebd78e,
-			position: center,
-			card-column: '5/7', 
-			card-row: '7/9'),
-
-	app-nhl: (image: 'projects/app-nhl.jpeg', 
-			size: contain,
-			color: #d1d1d0,
-			position: center,
-			card-column: '1/3', 
-			card-row: '7/9'),
-
-	app-favorite: (
-			image: 'background/favorite.jpg', 
-			size: cover,
-			card-column: '3/5', 
-			card-row: '7/9'),
-
-	app-codepen: (image: 'projects/app-codepen.png', 
-			size: contain,
-			position: center,
-			card-column: '1/3', 
-			card-row: '9/11'),
-
-	app-ebo: (image: 'projects/app-ebo.jpeg', 
-			size: cover,
-			card-column: '3/5', 
 			card-row: '1/3'),
-
-
-	app-eu-fund: (image: 'projects/app-eu-fund.png', 
-			size: cover,
-			card-column: '1/3', 
-			card-row: '11/13'),
 
 	app-web-workshop: (image: 'projects/app-web-workshop.png', 
 			size: initial,
@@ -85,13 +25,45 @@ $cards: (
 			color: #7d50fc,
 			card-column: '5/7', 
 			card-row: '1/3'),
-	
+
+	app-entry: (image: 'projects/app-entry.jpeg', 
+				size: contain,
+				color: #9cd3e7,
+				position: center,
+				card-column: '1/3', 
+				card-row: '3/5'),
+
+	app-wa: (image: 'projects/app-wa.jpeg', 
+			size: contain,
+			color: #ebd78e,
+			position: center,
+			card-column: '3/5', 
+			card-row: '3/5'),
+
+	app-nhl: (image: 'projects/app-nhl.jpeg', 
+			size: contain,
+			color: #d1d1d0,
+			position: center,
+			card-column: '5/7', 
+			card-row: '3/5'),
+
+	app-eu-fund: (image: 'projects/app-eu-fund.png', 
+			size: cover,
+			card-column: '1/3', 
+			card-row: '5/7'),
+
 	app-web-workshop-lecturer: (image: 'projects/app-web-workshop.png', 
 			size: initial,
 			position: center,
 			color: #7d50fc,
 			card-column: '3/5', 
-			card-row: '11/13'),
+			card-row: '5/7'),
+
+	app-codepen: (image: 'projects/app-codepen.png', 
+			size: contain,
+			position: center,
+			card-column: '5/7', 
+			card-row: '5/7'),
 );
 
 @mixin generate() {

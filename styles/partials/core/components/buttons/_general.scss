@@ -27,7 +27,7 @@
 	@include hovers.font-hover(vars.$font-color-light, vars.$accent);
 	position: absolute;
 	left: 50%;
-    bottom: 4%;
+    bottom: vars.$small-gap;
 	transform: translateX(-50%);
     font-size: 60px;
     cursor: pointer;

@@ -1,6 +1,9 @@
 @use '../../../../modules/variables' as vars;
-@use '../../../../modules/components/backgrounds/generate' as backgrounds;
 @use '../../../../modules/components/headers/generate' as headers;
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/layouts/positions/absolute';
+
+@use 'sass:color';
 
 .experience {
 	position: relative;
@@ -18,19 +21,46 @@
 	}
 }
 
-.app-favorite {
-	display: none;
-	flex-direction: row;
-    justify-content: left;
-    align-items: center;
+.experience-block-container {
+	margin-top: vars.$extra-large-gap;
+}
 
-	.icon {
-		color: #01723A;
-		font-size: 50px;
-		transform: rotate(-90deg);	
+.experience-block {
+	margin-top: vars.$large-gap;
+	padding: vars.$default-gap;
+	border-radius: vars.$border-radius;
+	background: vars.$gradient-default;
+
+	.text {
+		@include fonts.hand-written-font(30px);
+		position: relative;
+		text-transform: capitalize;
+		&::after {
+			@include absolute.position-unset(unset, 0, 4px, 0);
+			content: '';  
+			height: 10px;
+			display: block;
+			border-bottom: 10px solid color.adjust(vars.$accent-dark, $alpha: -.3);
+		}
+	}
+}
+
+.projects-wrapper {
+    top: -102px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+
+	.text {
+		@include fonts.hand-written-font(22px);
 	}
 
-	@media screen and (min-width: 1024px) {
-		display: flex;
-    }
+	.icon {
+		transform: scaleY(-1);
+		display: block;
+		padding-right: vars.$large-gap;
+		font-size: 55px;
+		text-align: right;
+		color: vars.$accent-dark;
+	}
 }
