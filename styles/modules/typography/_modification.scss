@@ -1,16 +1,3 @@
-@mixin ellipsis($num: 1) {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-
-	@if $num > 1 {
-		white-space: unset;
-		display: -webkit-box;
-		-webkit-line-clamp: $num;
-		-webkit-box-orient: vertical;
-	}
-}
-
 @mixin first-letter-capital() {
 	&:first-letter {
 		text-transform: uppercase;

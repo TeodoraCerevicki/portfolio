@@ -879,61 +879,6 @@ p {
   }
 }
 
-.first-letter-capitalized {
-  display: inline-block;
-}
-.first-letter-capitalized::first-letter {
-  text-transform: capitalize;
-}
-
-.capitalized {
-  text-transform: uppercase;
-}
-
-.space-between {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.align-center {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.align-right {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.align-vertical {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.clickable {
-  cursor: pointer;
-}
-
-.draggable {
-  cursor: grab;
-}
-
-.forbidden {
-  cursor: not-allowed;
-}
-
 .hide {
   display: none;
 }
