@@ -7,3 +7,7 @@
 .hide-on-desktop {
 	@include visibility.show-on-mobile();
 }
+
+.open {
+	display: block!important;
+}

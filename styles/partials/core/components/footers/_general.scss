@@ -1,7 +1,10 @@
 @use '../../../../modules/variables' as vars;
 @use '../../../../modules/layouts/alignments/items';
+@use '../../../../modules/layouts/positions/absolute';
+@use '../../../../modules/states/hovers';
 
 .footer {
+    position: relative;
     background-color: vars.$primary;
 
     .footer-list {
@@ -13,6 +16,52 @@
         &:hover {
             background-color: vars.$accent;
             color: vars.$font-color-light;
+        }
+    }
+
+    .images-used {
+        @include absolute.position-unset(50%, 16px, unset, unset);
+        transform: translateY(-50%);
+
+        .icon {
+            cursor: pointer;
+            color: vars.$font-color-light;
+            font-size: vars.$icon-size;
+        }
+
+        .content {
+            @include absolute.position-unset(unset, 0, 45px, unset);
+            width: 300px;
+            border: 1px solid #6f6f6f;
+            background-color: #fff;
+            box-shadow: vars.$default-shadow;
+            display: none;
+        }
+
+        .item, .text {
+            display: block;
+            font-size: 16px;
+        }
+
+        .item {
+            @include hovers.font-hover(vars.$font-color-dark, vars.$font-color-light);
+        }
+
+        .header {
+            @include items.fully-align(center, space-between, row, nowrap);
+            padding: vars.$default-gap;
+            border-bottom: vars.$default-border;
+            background: vars.$accent;
+
+            .text {
+                color: vars.$font-color-light;
+            }
+
+            .close-icon {
+                @include hovers.font-hover(vars.$font-color-light, vars.$font-color-dark);
+                font-size: vars.$icon-size;
+                cursor: pointer;
+            }
         }
     }
 }

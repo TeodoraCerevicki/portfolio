@@ -11,6 +11,14 @@ $(function(){
     $('.js-read-more-btn').click(function(){
         $('.js-read-more-btn-text, .js-read-more-text').toggleClass('open');
     });
+
+    $('.js-used-images-icon').click(function(){
+        $('.js-used-images-content').toggleClass('open');
+    });
+
+    $('.js-close-images-icon, .js-used-images-content').click(function(){
+        $('.js-used-images-content').removeClass('open');
+    });
 });
 
 (function() {

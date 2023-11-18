@@ -447,6 +447,7 @@ p {
 }
 
 .footer {
+  position: relative;
   background-color: #212121;
 }
 .footer .footer-list {
@@ -462,6 +463,74 @@ p {
 .footer .item:hover {
   background-color: #00cc83;
   color: #f1eee6;
+}
+.footer .images-used {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  bottom: unset;
+  left: unset;
+  transform: translateY(-50%);
+}
+.footer .images-used .icon {
+  cursor: pointer;
+  color: #f1eee6;
+  font-size: 24px;
+}
+.footer .images-used .content {
+  position: absolute;
+  top: unset;
+  right: 0;
+  bottom: 45px;
+  left: unset;
+  width: 300px;
+  border: 1px solid #6f6f6f;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: none;
+}
+.footer .images-used .item, .footer .images-used .text {
+  display: block;
+  font-size: 16px;
+}
+.footer .images-used .item {
+  color: #212121;
+  transition: 0.3s;
+}
+.footer .images-used .item:hover, .footer .images-used .item:hover::before {
+  color: #f1eee6;
+}
+@media (hover: hover) {
+  .footer .images-used .item:hover {
+    color: #f1eee6;
+  }
+}
+.footer .images-used .header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #424445;
+  background: #00cc83;
+}
+.footer .images-used .header .text {
+  color: #f1eee6;
+}
+.footer .images-used .header .close-icon {
+  color: #f1eee6;
+  transition: 0.3s;
+  font-size: 24px;
+  cursor: pointer;
+}
+.footer .images-used .header .close-icon:hover, .footer .images-used .header .close-icon:hover::before {
+  color: #212121;
+}
+@media (hover: hover) {
+  .footer .images-used .header .close-icon:hover {
+    color: #212121;
+  }
 }
 
 .cards-conainer {
@@ -785,9 +854,6 @@ p {
 .about .read-more-btn .text {
   display: none;
 }
-.about .open {
-  display: block;
-}
 
 .about-image {
   width: 250px;
@@ -881,6 +947,10 @@ p {
   }
 }
 
+.open {
+  display: block !important;
+}
+
 .border-top-accent {
   border-top: 5px solid #00cc83;
 }
@@ -910,7 +980,4 @@ p {
 }
 .status-message.status-error::before {
   content: "\e907";
-}
-.status-message.open {
-  display: block;
 }/*# sourceMappingURL=main.css.map */
