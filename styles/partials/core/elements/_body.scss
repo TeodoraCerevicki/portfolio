@@ -23,6 +23,27 @@ body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, foote
 	line-height: 1.5;
 }
 
+h1, h2, h3, h4, h5, h6, p, a, span, li {
+	&::selection {
+		background: vars.$accent-light;
+	}
+
+	&::-moz-selection { 
+		background: vars.$accent-light;
+	}
+}
+
+br {
+	&::selection {
+		background: transparent;
+	}
+
+	&::-moz-selection { 
+		background: transparent;
+	  }
+}
+
 span {
 	line-height: inherit;
 }
+

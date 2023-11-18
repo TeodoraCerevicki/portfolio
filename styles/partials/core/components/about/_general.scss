@@ -1,5 +1,6 @@
 @use '../../../../modules//variables' as vars;
 @use '../../../../modules/layouts/alignments/items';
+@use '../../../../modules/typography/fonts';
 @use '../../../../modules/components/headers/generate' as headers;
 
 $profile-image-size-small: 250px;
@@ -37,11 +38,15 @@ $profile-image-size-large: 450px;
             margin-right: unset;
             order: unset;
         }
-        
     }
     
     .desc {
         margin-top: vars.$default-gap;
+    }
+
+    .link {
+        @include fonts.main-medium-font(20px);
+        color: vars.$accent;
     }
 
     .read-more-text,

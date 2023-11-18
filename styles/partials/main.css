@@ -28,6 +28,28 @@ body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, foote
   line-height: 1.5;
 }
 
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, a::-moz-selection, span::-moz-selection, li::-moz-selection {
+  background: rgba(0, 204, 131, 0.6117647059);
+}
+
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, span::selection, li::selection {
+  background: rgba(0, 204, 131, 0.6117647059);
+}
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, a::-moz-selection, span::-moz-selection, li::-moz-selection {
+  background: rgba(0, 204, 131, 0.6117647059);
+}
+
+br::-moz-selection {
+  background: transparent;
+}
+
+br::selection {
+  background: transparent;
+}
+br::-moz-selection {
+  background: transparent;
+}
+
 span {
   line-height: inherit;
 }
@@ -40,7 +62,7 @@ button {
 }
 
 a {
-  color: #f1eee6;
+  color: inherit;
   transition: 0.3s;
   display: inline-block;
   text-decoration: none;
@@ -842,6 +864,11 @@ p {
 }
 .about .desc {
   margin-top: 16px;
+}
+.about .link {
+  font-family: "Montserrat Medium";
+  font-size: 20px;
+  color: #00cc83;
 }
 .about .read-more-text,
 .about .read-more-btn-text {
