@@ -12,11 +12,9 @@
     }
 
     .item {
+        @include hovers.font-hover(vars.$font-color-light, vars.$font-color-light);
+        @include hovers.background-hover(transparent, vars.$accent);
         padding: vars.$default-gap;
-        &:hover {
-            background-color: vars.$accent;
-            color: vars.$font-color-light;
-        }
     }
 
     .images-used {
@@ -59,6 +57,7 @@
 
             .close-icon {
                 @include hovers.font-hover(vars.$font-color-light, vars.$font-color-dark);
+                margin-left: vars.$small-gap;
                 font-size: vars.$icon-size;
                 cursor: pointer;
             }

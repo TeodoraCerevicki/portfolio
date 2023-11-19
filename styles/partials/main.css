@@ -480,11 +480,22 @@ p {
   justify-content: center;
 }
 .footer .item {
+  color: #f1eee6;
+  transition: 0.3s;
+  background-color: transparent;
+  transition: 0.3s;
   padding: 16px;
+}
+.footer .item:hover, .footer .item:hover::before {
+  color: #f1eee6;
+}
+@media (hover: hover) {
+  .footer .item:hover {
+    color: #f1eee6;
+  }
 }
 .footer .item:hover {
   background-color: #00cc83;
-  color: #f1eee6;
 }
 .footer .images-used {
   position: absolute;
@@ -543,6 +554,7 @@ p {
 .footer .images-used .header .close-icon {
   color: #f1eee6;
   transition: 0.3s;
+  margin-left: 8px;
   font-size: 24px;
   cursor: pointer;
 }
