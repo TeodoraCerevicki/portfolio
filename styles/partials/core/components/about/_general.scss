@@ -10,6 +10,7 @@ $profile-image-size-large: 450px;
 .about {
     @include headers.default(30px, 50px);
     position: relative;
+    min-height: 100vh;
     padding: vars.$extra-large-gap 0;
 
     .content {

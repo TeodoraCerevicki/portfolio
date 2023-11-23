@@ -829,6 +829,7 @@ p {
 
 .about {
   position: relative;
+  min-height: 100vh;
   padding: 64px 0;
 }
 .about .subtitle {
