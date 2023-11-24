@@ -58,6 +58,10 @@ $background-dark: color.adjust(#000, $alpha: -.3);
         height: 44px;
     }
 
+    .toggle-icon {
+        font-size: 30px;
+    }
+
     .nav-wrapper {
         @include absolute.position-unset(62px, 0, 0, 0);
         height: 100vh;
