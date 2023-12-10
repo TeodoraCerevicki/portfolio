@@ -719,13 +719,13 @@ p {
   background-position: center;
 }
 
-.app-wa {
+.app-interview {
   grid-column: 3/5;
   grid-row: 3/5;
 }
 
-.app-wa {
-  background-image: url("../../assets/images/projects/app-wa.jpeg");
+.app-interview {
+  background-image: url("../../assets/images/projects/app-interview.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #ebd78e;
