@@ -12,7 +12,7 @@ $background-dark: color.adjust(#000, $alpha: -.3);
 .main-nav {
 	@include items.fully-align(center, space-between);
     @include fixed.position-unset(0, 0, unset, 0);
-    z-index: 1;
+    z-index: 1000;
     background-color: $background-dark;
 
     .mobile-nav-item,
@@ -87,6 +87,18 @@ $background-dark: color.adjust(#000, $alpha: -.3);
     }
 
     .section-nav {
+
+        .trivia, .go-home {
+            .icon {
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        .go-home .icon {
+            display: inline-block;  
+            transform: scaleX(-1); 
+        }
         @media screen and (min-width: 1024px) {
             flex: 2 1 0;
         }

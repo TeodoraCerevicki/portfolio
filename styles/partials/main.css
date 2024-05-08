@@ -185,7 +185,7 @@ p {
   right: 0;
   bottom: unset;
   left: 0;
-  z-index: 1;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .main-nav .mobile-nav-item,
@@ -266,6 +266,14 @@ p {
     align-items: center;
     justify-content: flex-start;
   }
+}
+.main-nav .section-nav .trivia .icon, .main-nav .section-nav .go-home .icon {
+  position: relative;
+  top: 2px;
+}
+.main-nav .section-nav .go-home .icon {
+  display: inline-block;
+  transform: scaleX(-1);
 }
 @media screen and (min-width: 1024px) {
   .main-nav .section-nav {
@@ -961,6 +969,76 @@ p {
     min-width: 450px;
     height: 450px;
   }
+}
+
+.trivia-background {
+  background-image: url("../../assets/images/background/desktop/trivia-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  background-position: center bottom;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.page-trivia .opening-hero {
+  background: none;
+}
+.page-trivia .opening-hero .subtitle, .page-trivia .opening-hero .text {
+  color: #f1eee6;
+}
+.page-trivia .cards-conainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding: 64px 0;
+  padding-top: 0;
+}
+.page-trivia .card {
+  width: 332px;
+  padding: 16px;
+  box-shadow: rgba(0, 204, 131, 0.16) 16px 16px 82px 0px;
+  border: 1px solid #059c66;
+  background: #f2f2f2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.page-trivia .card:hover {
+  box-shadow: rgba(0, 204, 131, 0.2) -15px 8px 98px 54px;
+  transition: 0.3s;
+}
+.page-trivia .card .cover-image {
+  height: 290px;
+  overflow: hidden;
+  border: 1px solid #059c66;
+}
+.page-trivia .card .title, .page-trivia .card .desc {
+  margin-top: 16px;
+}
+.page-trivia .card .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 50px;
+}
+.page-trivia .card .desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 16px;
+  height: 72px;
+}
+.page-trivia .card .read {
+  font-family: "Montserrat SemiBold";
+  font-size: 16px;
+  margin-top: 16px;
+  color: #059c66;
+}
+.page-trivia .card .read:hover {
+  transform: scale(1.01);
 }
 
 .hide {

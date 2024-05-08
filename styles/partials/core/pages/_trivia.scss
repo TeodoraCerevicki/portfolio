@@ -1,0 +1,73 @@
+@use '../../../modules/variables' as vars;
+@use '../../../modules/components/backgrounds/generate' as backgrounds;
+@use '../../../modules/typography/modification';
+@use '../../../modules/typography/fonts';
+
+.trivia-background {
+    @include backgrounds.image('background/desktop/trivia-hero.png', cover, transparent, center bottom);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.page-trivia {
+    .opening-hero {
+        background: none;
+
+        .subtitle, .text {
+            color: vars.$font-color-light;
+        }
+    }
+
+    .cards-conainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        padding: vars.$extra-large-gap 0;
+        padding-top: 0;
+    }
+
+    .card {
+        width: 332px;
+        padding: vars.$default-gap;   
+        box-shadow: rgba(0, 204, 131, 0.16) 16px 16px 82px 0px;
+        border: 1px solid vars.$accent-dark;
+        background: #f2f2f2;
+        cursor: pointer;
+        transition: vars.$default-transition;
+
+        &:hover {
+            box-shadow: rgba(0, 204, 131, 0.2) -15px 8px 98px 54px;
+            transition: vars.$default-transition;
+        }
+
+        .cover-image {
+            height: 290px;
+            overflow: hidden;
+            border: 1px solid vars.$accent-dark;
+        }
+        .title, .desc {
+            margin-top: vars.$default-gap;
+        }
+
+        .title {
+            @include modification.line-clamp(2);
+            height: 50px;
+        }
+
+        .desc {
+            @include modification.line-clamp();
+            font-size: vars.$font-size-default;
+            height: 72px;
+        }
+
+        .read {
+            @include fonts.main-bolded-font(16px);
+            margin-top: vars.$default-gap;
+            color: vars.$accent-dark;
+            &:hover {
+                transform: scale(1.01);
+            }
+        }
+    }
+}

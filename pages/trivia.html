@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/fonts/icomoon/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/partials/main.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon_package/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon_package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon_package/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon_package/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Favicon end -->
+
+    <!-- SEO -->
+    <title>Thea - Trivia</title>
+    <meta name="description" 
+        content="Trivia - beacuse why not">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Teodora Čerevicki - Trivia - why not?">
+    <meta property="og:description" content="Discover innovative frontend designs showcasing HTML, CSS, and JavaScript expertise for seamless user experiences.">
+    <meta property="og:image" content="https://teodoracerevicki.github.io/portfolio/assets/images/preview-image.png">
+    <meta property="og:url" content="https://teodoracerevicki.github.io/portfolio/">
+    
+</head>
+
+<body>
+    <nav id="home" class="main-nav">
+        <a class="item logo-wrapper" href="../index.html">
+            <img class="logo" src="../assets/images/logo-transparent.png" alt="logo with cup of tea">
+        </a>
+
+        <div class="nav-wrapper js-nav hide">
+            <ul class="section-nav">
+                <li><a class="item mobile-nav-item go-home" href="../index.html">
+                    <span class="icon-arrow-out icon"></span>
+                    E.T. go home
+                </a></li>
+            </ul>
+
+            <ul class="social-nav">
+                <li>
+                    <a class="item" href="https://github.com/TeodoraCerevicki/" target="_blank">
+                        <span class="icon-github"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="item" href="https://codepen.io/teodoracerevicki" target="_blank">
+                        <span class="icon-codepen"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="item" href="https://www.linkedin.com/in/teodora-cerevicki/" target="_blank">
+                        <span class="icon-linkedin-in"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hide-on-desktop">
+            <button class="item icon-menu toggle-icon js-burger-icon"></button>
+            <button class="item icon-close toggle-icon js-close-icon hide"></button>
+        </div>
+    </nav>
+
+    <main class="page-trivia">
+        <div class="trivia-background">
+        </div>
+
+        <header id="hero" class="opening-hero">
+            <div class="container">
+                <h1 class="subtitle">some</h1>
+                <h2 class="title">Trivia - why not?</h2>
+                <p class="text">
+                    Welcome to my Trivia page </br>were you might see something you didn't know </br>and learn more about my interests
+                </p>
+            </div>
+            
+            <!-- <a href="#trivia" class="icon-arrow-down scroll-button"></a> -->
+        </header>
+
+        <section id="trivia" class="">
+            <div class="container">
+
+                <div class="cards-conainer">
+                    <section class="card">
+                        <div class="cover-image">
+                            <img src="../assets/images/trivia/dali-chups.png" alt="chupa chups Dali image">
+                        </div>
+
+                        <h1 class="title">Iconic duo - Chupa chups and Salvador Dalí</h1>
+                        <p class="desc">
+                            Probably the most know trivia is that Salvador Dali designed logo for chupa chups.
+                        </p>
+
+                        <span class="read">Tell me more!</span>
+                    </section>
+
+                    <section class="card">
+                        <div class="cover-image">
+                            <img src="../assets/images/trivia/heart-joind.png" alt="heart as organ and icon">
+                        </div>
+
+                        <h1 class="title">History of Heart icon</h1>
+                        <p class="desc">
+                            How did the heart, as an organ, got this shape for public eye?
+                        </p>
+
+                        <span class="read">Tell me more!</span>
+                    </section>
+
+                    <section class="card">
+                        <div class="cover-image">
+                            <img src="../assets/images/trivia/woman-cat.jpg" alt="woman holding a cat">
+                        </div>
+
+                        <h1 class="title">Women and other mammals</h1>
+                        <p class="desc">
+                            Can a woman get pregnant multiple times during one period, like cats?
+                        </p>
+
+                        <span class="read">Tell me more!</span>
+                    </section>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- <section id="contact" class="contact border-top-accent">
+            <form id="contact-form" class="form">
+                <header>
+                    <h2 class="subtitle">Let's</h2>
+                    <h3 class="title">Get in touch</h3>
+                </header>
+                
+                <input type="hidden" name="contact_number">
+                <input name="user_name" type="text" id="name" class="input-field" placeholder="What is your name?" required>
+                <input name="user_email" type="email" id="email" class="input-field" placeholder="What is your email?" required>
+                <input name="user_subject" type="text" id="title" class="input-field" placeholder="Title of our topic" required>
+                <textarea name="message" id="message" class="textarea" cols="30" rows="10" placeholder="Description of our topic" required></textarea>
+                <button class="button-accent" type="submit">Send</button>
+
+                <p class="status-success status-message">Message was successfully sent!</p>
+                <p class="status-error status-message">Message was not sent!</p>
+            </form>
+
+            <a href="#hero" class="icon-arrow-up scroll-button"></a>
+        </section> -->
+    </main>
+
+    <footer class="footer border-top-accent">
+        <ul class="footer-list">
+            <li>
+                <a class="item" href="mailto:teodora.cerevicki@gmail.com" target="_blank">
+                    <span class="icon-mail"></span>
+                </a>
+            </li>
+            <li>
+                <a class="item" href="https://github.com/TeodoraCerevicki/" target="_blank">
+                    <span class="icon-github"></span>
+                </a>
+            </li>
+            <li>
+                <a class="item" href="https://codepen.io/teodoracerevicki" target="_blank">
+                    <span class="icon-codepen"></span>
+                </a>
+            </li>
+            <li>
+                <a class="item" href="https://www.linkedin.com/in/teodora-cerevicki/" target="_blank">
+                    <span class="icon-linkedin-in"></span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="images-used">
+            <span class="icon-photo_library icon js-used-images-icon"></span>
+            <section class="content js-used-images-content">
+                <div class="header">
+                    <h2 class="text">Links to images that are used on this website</h2>
+                    <span class="icon-close close-icon js-close-images-icon"></span>
+                </div>
+                <a href="https://rb.gy/k4nhqp" class="item" target="_blank">Home image</a>
+                <a href="https://rb.gy/k4nhqp" class="item" target="_blank">Woman & cat image</a>
+                <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons" class="item" target="_blank">Arrow icons created by Freepik - Flaticon</a>
+            </section>
+        </div>
+    </footer>
+
+    <!-- JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
