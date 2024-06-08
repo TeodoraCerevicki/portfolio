@@ -16,10 +16,15 @@
 }
 
 .carousel-image {
-    height: 500px;
-    width: auto;
+    height: auto;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: vars.$extra-large-gap;
+
+    @media screen and (min-width: 768px) {
+        height: 500px;
+        width: auto;
+    }
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
