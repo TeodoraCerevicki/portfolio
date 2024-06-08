@@ -1,0 +1,67 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/typography/fonts';
+@use '../../../../modules/states/hovers';
+@use '../../../../modules/layouts/alignments/items';
+
+.post-warpper {
+    margin-top: 100px;
+
+    .link {
+        @include hovers.font-hover(vars.$accent-dark, vars.$accent);
+        @include fonts.main-bolded-font(20px);
+
+        &:hover {
+            animation: shake 150ms 2 linear;
+        }
+    }
+}
+
+.post {
+    margin: {
+        top: vars.$extra-large-gap;
+        bottom: vars.$extra-large-gap;
+    }
+    padding: vars.$large-gap;
+    background: vars.$gradient-dark;
+    border-radius: vars.$border-radius;
+
+    .header, .content {
+        padding: vars.$default-gap;
+        background-color: vars.$background-default;
+    }
+    .header {
+        @include items.align-center();
+        border-top-left-radius: vars.$border-radius;
+        border-top-right-radius: vars.$border-radius;
+        border-bottom: 1px solid vars.$accent;
+        overflow: hidden;
+
+        .image {
+            width: 200px;
+            height: 200px;
+        }
+
+        .title {
+            @include fonts.hand-written-font(60px);
+        }
+    }
+
+    .content {
+        margin-top: vars.$large-gap;
+        border-bottom-left-radius: vars.$border-radius;
+        border-bottom-right-radius: vars.$border-radius;
+        border-top: 1px solid vars.$accent;
+    }
+}
+
+@keyframes shake {
+    0% {
+      transform: translate(3px, 0);
+    }
+    50% {
+      transform: translate(-3px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+}

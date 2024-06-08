@@ -2,10 +2,12 @@
 @use '../../../modules/components/backgrounds/generate' as backgrounds;
 @use '../../../modules/typography/modification';
 @use '../../../modules/typography/fonts';
+@use '../../../modules/layouts/positions/fixed';
 
 .trivia-background {
+    @include fixed.position();
     @include backgrounds.image('background/desktop/trivia-hero.png', cover, transparent, center bottom);
-    position: fixed;
+    z-index: -1;
     width: 100%;
     height: 100%;
 }
