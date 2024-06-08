@@ -6,6 +6,13 @@
         bottom: vars.$large-gap;
     }
 
+    @media screen and (min-width: 1024px) {
+        width: 60%;
+        margin: {
+            right: auto;
+            left: auto;
+        }
+    }
 }
 
 .carousel-image {
