@@ -6,10 +6,14 @@
 
 .trivia-background {
     @include fixed.position();
-    @include backgrounds.image('background/desktop/trivia-hero.png', cover, transparent, center bottom);
+    @include backgrounds.image('background/mobile/trivia-hero.png', cover, transparent, center bottom);
     z-index: -1;
     width: 100%;
     height: 100%;
+
+    @media screen and (min-width: 768px) {
+        @include backgrounds.image('background/desktop/trivia-hero.png', cover, transparent, center bottom);
+    }
 }
 
 .page-trivia {
