@@ -19,18 +19,73 @@
         .subtitle, .text {
             color: vars.$font-color-light;
         }
+
+        .title {
+            font-size: 35px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 70px;
+            }
+        }
+
+        .text {
+            margin-top: vars.$default-gap;
+            font-size: 24px;
+            
+            @media screen and (min-width: 768px) {
+                margin-top: vars.$large-gap;
+                font-size: 30px;
+            }
+        }
     }
 
     .cards-conainer {
         display: flex;
-        justify-content: center;
+        justify-content: start;
         margin-top: 0;
         padding: vars.$extra-large-gap 0;
         padding-top: 0;
+
+        @media screen and (min-width: 783px) {
+            grid-gap: vars.$default-gap;
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-gap: vars.$large-gap;
+        }
+    }
+
+    .post-link {
+        display: block;
+        width: 100%;
+
+        @media screen and (min-width: 783px) {
+            width: 332px;
+        }
+
+        &:first-child {
+            position: relative;
+            overflow: visible;
+            &::before {
+                content: "I'm fresh blood!";
+                position: absolute;
+                top: -19px;
+                left: 0;
+                background-color: vars.$accent-dark;
+                color: vars.$font-color-light;
+                padding: calc(vars.$small-gap / 2) vars.$default-gap;
+                font-size: 18px;
+
+                @media screen and (min-width: 1024px) {
+                    width: 332px;
+                    top: -35px;
+                }
+            }
+        }
     }
 
     .card {
-        width: 332px;
+        height: auto;
         padding: vars.$default-gap;   
         box-shadow: rgba(0, 204, 131, 0.16) 16px 16px 82px 0px;
         border: 1px solid vars.$accent-dark;
@@ -47,7 +102,15 @@
             height: 290px;
             overflow: hidden;
             border: 1px solid vars.$accent-dark;
+
+            .image {
+                height: 100%;
+                width: auto;
+                display: block;
+                margin: auto;
+            }
         }
+
         .title, .desc {
             margin-top: vars.$default-gap;
         }
