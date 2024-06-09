@@ -37,7 +37,7 @@
 		margin-top: 0;
     }
 
-	&.latest {
+	&:first-child {
 		position: relative;
 		overflow: visible;
 		&::before {

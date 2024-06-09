@@ -2,6 +2,8 @@
 @use '../../../../modules/typography/fonts';
 @use '../../../../modules/states/hovers';
 @use '../../../../modules/layouts/alignments/items';
+@use '../../../../modules/components/animations/generate' as animations;
+
 
 .post-warpper {
     margin-top: 100px;
@@ -104,14 +106,4 @@
     }
 }
 
-@keyframes shake {
-    0% {
-      transform: translate(3px, 0);
-    }
-    50% {
-      transform: translate(-3px, 0);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-}
+@include animations.shake();

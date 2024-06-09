@@ -646,11 +646,11 @@ p {
     margin-top: 0;
   }
 }
-.card.latest {
+.card:first-child {
   position: relative;
   overflow: visible;
 }
-.card.latest::before {
+.card:first-child::before {
   content: "I'm fresh blood!";
   position: absolute;
   top: -35px;
