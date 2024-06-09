@@ -6,51 +6,101 @@
 .post-warpper {
     margin-top: 100px;
 
+    @media screen and (min-width: 768px) {
+        margin-top: 80px;
+    }
+
     .link {
         @include hovers.font-hover(vars.$accent-dark, vars.$accent);
         @include fonts.main-bolded-font(20px);
+        display: inline-flex;
+        align-items: center;
+        margin-left: -#{vars.$default-gap};
 
         &:hover {
             animation: shake 150ms 2 linear;
+        }
+
+        .icon {
+            font-size: 30px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-left: 0;
         }
     }
 }
 
 .post {
     margin: {
-        top: vars.$extra-large-gap;
-        bottom: vars.$extra-large-gap;
+        top: vars.$default-gap;
+        bottom: vars.$default-gap;
+        right: -#{vars.$default-gap};
+        left: -#{vars.$default-gap};
     }
-    padding: vars.$large-gap;
+    padding: vars.$default-gap;
     background: vars.$gradient-dark;
     border-radius: vars.$border-radius;
 
+    @media screen and (min-width: 768px) {
+        margin: {
+            top: vars.$extra-large-gap;
+            bottom: vars.$extra-large-gap;
+            right: 0;
+            left: 0;
+        }
+        padding: vars.$large-gap;
+    }
+
     .header, .content {
-        padding: vars.$default-gap;
         background-color: vars.$background-default;
     }
     .header {
-        @include items.align-center();
+        @include items.align-absolute-center();
+        padding: vars.$small-gap;
         border-top-left-radius: vars.$border-radius;
         border-top-right-radius: vars.$border-radius;
         border-bottom: 1px solid vars.$accent;
         overflow: hidden;
 
+        @media screen and (min-width: 768px) {
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            padding: vars.$default-gap;
+        }
+
         .image {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
+            @media screen and (min-width: 768px) {
+                width: 200px;
+                height: 200px;
+            }
         }
 
         .title {
-            @include fonts.hand-written-font(60px);
+            @include fonts.hand-written-font(36px);
+
+            @media screen and (min-width: 768px) {
+                font-size: 60px;
+            }
         }
     }
 
     .content {
         margin-top: vars.$large-gap;
+        padding: vars.$default-gap;
         border-bottom-left-radius: vars.$border-radius;
         border-bottom-right-radius: vars.$border-radius;
         border-top: 1px solid vars.$accent;
+    }
+
+    .text {
+        font-size: 16px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
     }
 }
 
