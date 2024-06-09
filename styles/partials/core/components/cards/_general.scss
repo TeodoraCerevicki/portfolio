@@ -37,6 +37,21 @@
 		margin-top: 0;
     }
 
+	&.latest {
+		position: relative;
+		overflow: visible;
+		&::before {
+			content: "I'm fresh blood!";
+			position: absolute;
+			top: -35px;
+			left: 0;
+			background-color: vars.$accent-dark;
+			color: vars.$font-color-light;
+			padding: calc(vars.$small-gap / 2) vars.$default-gap;
+			font-size: 18px;
+		}
+	}
+
 	.card-banner {
         @include absolute.position-unset(unset, 0, 0, 0);
 		@include fonts.main-medium-font(16px);

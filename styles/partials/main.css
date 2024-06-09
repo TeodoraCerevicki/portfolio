@@ -646,6 +646,20 @@ p {
     margin-top: 0;
   }
 }
+.card.latest {
+  position: relative;
+  overflow: visible;
+}
+.card.latest::before {
+  content: "I'm fresh blood!";
+  position: absolute;
+  top: -35px;
+  left: 0;
+  background-color: #059c66;
+  color: #f1eee6;
+  padding: 4px 16px;
+  font-size: 18px;
+}
 .card .card-banner {
   position: absolute;
   top: unset;
