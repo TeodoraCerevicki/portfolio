@@ -1270,6 +1270,10 @@ p {
     top: -35px;
   }
 }
+.page-trivia .post-link:first-child .card {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
 .page-trivia .card {
   height: auto;
   padding: 16px;
