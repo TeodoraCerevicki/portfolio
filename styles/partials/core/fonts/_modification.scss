@@ -1,0 +1,6 @@
+@use '../../../modules/variables' as vars;
+@use '../../../modules/typography/fonts';
+
+.standout-text {
+    @include fonts.hand-written-font(23px);
+}
