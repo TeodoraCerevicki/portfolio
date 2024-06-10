@@ -15,6 +15,14 @@ $background-dark: color.adjust(#000, $alpha: -.3);
     z-index: 1000;
     background-color: $background-dark;
 
+    .dark-mode-toggle {
+        order: 1;
+    }
+
+    .burger-nav {
+        order: 2;
+    }
+
     .mobile-nav-item,
     .social-nav {
         border-top: vars.$border-accent;

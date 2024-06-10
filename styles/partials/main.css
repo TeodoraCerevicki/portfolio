@@ -196,6 +196,12 @@ li {
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.7);
 }
+.main-nav .dark-mode-toggle {
+  order: 1;
+}
+.main-nav .burger-nav {
+  order: 2;
+}
 .main-nav .mobile-nav-item,
 .main-nav .social-nav {
   border-top: 2px solid #059c66;
