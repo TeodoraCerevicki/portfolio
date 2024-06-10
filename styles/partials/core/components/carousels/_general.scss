@@ -1,5 +1,7 @@
 @use '../../../../modules/variables' as vars;
 
+@use 'sass:color';
+
 .carousel {
     margin: {
         top: vars.$extra-large-gap;
@@ -16,6 +18,7 @@
 }
 
 .carousel-image {
+    min-height: 440px;
     height: auto;
     width: 100%;
     margin: 0 auto;
@@ -27,8 +30,19 @@
     }
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-    filter: invert(0.44) sepia(0.75) hue-rotate(86deg) saturate(5) brightness(0.95) contrast(1.2);
+.carousel-control-prev,
+.carousel-control-next {
+    margin: {
+        right: vars.$default-gap;
+        left: vars.$default-gap;
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: unset;
+    height: unset;
+    background-image: none;
 }
 
 .carousel-indicators [data-bs-target] {

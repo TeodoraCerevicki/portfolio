@@ -25,10 +25,7 @@
 
 .scroll-button {
 	@include hovers.font-hover(vars.$font-color-light, vars.$accent);
-	position: absolute;
-	left: 50%;
     bottom: vars.$small-gap;
-	transform: translateX(-50%);
     font-size: 60px;
     cursor: pointer;
 	border: 1px solid transparent;
@@ -36,5 +33,11 @@
 
 	&:hover {
 		border-color: vars.$accent;
+	}
+
+	&.center {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }

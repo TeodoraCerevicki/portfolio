@@ -158,10 +158,7 @@ p {
 .scroll-button {
   color: #f1eee6;
   transition: 0.3s;
-  position: absolute;
-  left: 50%;
   bottom: 8px;
-  transform: translateX(-50%);
   font-size: 60px;
   cursor: pointer;
   border: 1px solid transparent;
@@ -177,6 +174,11 @@ p {
 }
 .scroll-button:hover {
   border-color: #00cc83;
+}
+.scroll-button.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-nav {
@@ -995,6 +997,7 @@ p {
 }
 
 .carousel-image {
+  min-height: 440px;
   height: auto;
   width: 100%;
   margin: 0 auto;
@@ -1007,8 +1010,17 @@ p {
   }
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  filter: invert(0.44) sepia(0.75) hue-rotate(86deg) saturate(5) brightness(0.95) contrast(1.2);
+.carousel-control-prev,
+.carousel-control-next {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: unset;
+  height: unset;
+  background-image: none;
 }
 
 .carousel-indicators [data-bs-target] {
