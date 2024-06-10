@@ -5,12 +5,16 @@
 
 .opening-hero {
     @include items.fully-align(stretch, center);
-    @include headers.default(25px, 70px);
+    @include headers.default(25px, 60px);
     position: relative;
     height: 100vh;
     padding-top: 110px;
     background-position: center;
     background: var(--hero-mobile-background);
+
+    @media screen and (min-width: 768pz) {
+        font-size: 70px;
+    }
 
     @media screen and (min-width: 1024px) {
         background: var(--hero-desktop-background);

@@ -33,7 +33,10 @@ $outter-shadow: 5px 5px 5px #d1d9e6, -5px -5px 10px #fff;
     position: relative;
     width: 75px;
     height: 39px;
-    margin-left: vars.$default-gap;
+    margin: {
+        right: vars.$small-gap;
+        left: vars.$default-gap;
+    }
     padding: vars.$small-gap;
     border-radius: 20px;
     background: var(--default-linear-gradient);

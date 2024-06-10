@@ -320,7 +320,7 @@ li {
 }
 .opening-hero .title {
   font-family: "Montserrat SemiBold";
-  font-size: 70px;
+  font-size: 60px;
   color: #00cc83;
   line-height: 1.1;
 }
@@ -335,6 +335,11 @@ li {
 @media screen and (min-width: 500px) {
   .opening-hero .mobile-break-word {
     display: inline-block;
+  }
+}
+@media screen and (min-width: 768pz) {
+  .opening-hero {
+    font-size: 70px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1206,6 +1211,7 @@ li {
   position: relative;
   width: 75px;
   height: 39px;
+  margin-right: 8px;
   margin-left: 16px;
   padding: 8px;
   border-radius: 20px;
