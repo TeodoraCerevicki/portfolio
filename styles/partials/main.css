@@ -15,6 +15,7 @@ body {
   font-family: "Montserrat Regular";
   font-size: 20px;
   margin: 0;
+  background-color: var(--body-background);
 }
 body * {
   outline-color: transparent;
@@ -26,6 +27,10 @@ body.open-menu {
 body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, footer, article, aside, ul, li {
   box-sizing: border-box;
   line-height: 1.5;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, a, section, header, nav, main, footer, article, ul {
+  color: var(--default-font-color);
 }
 
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, a::-moz-selection, span::-moz-selection, li::-moz-selection {
@@ -94,10 +99,6 @@ ul {
 
 li {
   list-style-type: none;
-}
-
-p {
-  color: #212121;
 }
 
 @font-face {
@@ -307,15 +308,11 @@ p {
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
-  background-image: url("../../assets/images/background/mobile/home-hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: transparent;
-  background-position: left top;
   position: relative;
   height: 100vh;
   padding-top: 110px;
   background-position: center;
+  background: var(--hero-mobile-background);
 }
 .opening-hero .subtitle {
   font-family: "Indie_Flower";
@@ -342,12 +339,11 @@ p {
 }
 @media screen and (min-width: 1024px) {
   .opening-hero {
-    background-image: url("../../assets/images/background/desktop/home-hero.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent;
-    background-position: left top;
+    background: var(--hero-desktop-background);
   }
+}
+.opening-hero .hero-subtitle {
+  color: var(--default-font-color);
 }
 .opening-hero .text {
   font-family: "Indie_Flower";
@@ -379,7 +375,7 @@ p {
 }
 .skills .skill-group {
   padding: 32px 0 32px 32px;
-  background-color: rgba(247, 245, 239, 0.7);
+  background-color: var(--skill-background);
 }
 .skills .skill-group .subtitle {
   font-family: "Indie_Flower";
@@ -434,27 +430,19 @@ p {
 }
 
 .contact {
-  background-image: url("../../assets/images/background/mobile/footer-hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: transparent;
-  background-position: left top;
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  background: var(--contact-mobile-background);
 }
 .contact .title {
   margin-bottom: 16px;
 }
 @media screen and (min-width: 1024px) {
   .contact {
-    background-image: url("../../assets/images/background/desktop/footer-hero.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent;
-    background-position: left top;
+    background: var(--contact-desktop-background);
   }
 }
 
@@ -465,7 +453,7 @@ p {
   padding: 32px;
   padding-bottom: 64px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  background: #fff;
+  background: var(--body-background);
 }
 .form .subtitle {
   font-family: "Indie_Flower";
@@ -805,7 +793,7 @@ p {
 .experience {
   position: relative;
   padding: 64px 0;
-  background: linear-gradient(323deg, rgb(226, 227, 229) 0%, rgb(236, 238, 239) 34%);
+  background: var(--experience-background);
 }
 .experience .header .subtitle {
   font-family: "Indie_Flower";
@@ -844,7 +832,7 @@ p {
   margin-top: 32px;
   padding: 16px;
   border-radius: 4px;
-  background: linear-gradient(94deg, rgb(227, 255, 231) 0%, rgb(217, 231, 255) 99%);
+  background: var(--experience-block-background);
 }
 .experience-block .text {
   font-family: "Indie_Flower";
@@ -1187,6 +1175,57 @@ p {
     opacity: 0;
   }
 }
+.toggler {
+  position: absolute;
+  right: unset;
+  left: 8px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: inset 5px 5px 5px #d1d9e6, inset -5px -5px 10px #fff;
+}
+.toggler::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #00cc83;
+  border-radius: 50%;
+}
+
+.dark-mode-toggle {
+  position: relative;
+  width: 75px;
+  height: 39px;
+  margin-left: 16px;
+  padding: 8px;
+  border-radius: 20px;
+  background: var(--default-linear-gradient);
+}
+.dark-mode-toggle::before, .dark-mode-toggle::after {
+  position: absolute;
+  top: 5px;
+  font-family: "icomoon";
+}
+.dark-mode-toggle::before {
+  content: "\e90e";
+  left: 8px;
+  color: #00cc83;
+}
+.dark-mode-toggle::after {
+  content: "\e90f";
+  right: 8px;
+}
+
 .trivia-background {
   position: fixed;
   top: 0;
@@ -1336,6 +1375,35 @@ p {
 }
 .page-trivia .card .read:hover {
   transform: scale(1.01);
+}
+
+:root {
+  --default-font-color: #212121;
+  --body-background: #fff;
+  --default-linear-gradient: linear-gradient(94deg, rgb(227, 255, 231) 0%, rgb(217, 231, 255) 99%);
+  --experience-background: linear-gradient(323deg, rgba(226,227,229,1) 0%, rgba(236,238,239,1) 34%);
+  --experience-block-background: linear-gradient(94deg, rgb(227, 255, 231) 0%, rgb(217, 231, 255) 99%);
+  --skill-background: rgba(247, 245, 239, 0.7);
+  --hero-mobile-background: transparent url(../../assets/images/background/mobile/home-hero.jpg) no-repeat left top / cover;
+  --hero-desktop-background: transparent url(../../assets/images/background/desktop/home-hero.jpg) no-repeat left top / cover;
+  --contact-mobile-background: transparent url(../../assets/images/background/mobile/footer-hero.jpg) no-repeat left top / cover;
+  --contact-desktop-background: transparent url(../../assets/images/background/desktop/footer-hero.jpg) no-repeat left top / cover;
+}
+
+.dark {
+  --default-font-color: #f1eee6;
+  --body-background: #343741;
+  --default-linear-gradient: linear-gradient(94deg, rgb(52, 55, 65) 0%, rgb(227, 255, 231) 99%);
+  --experience-background: linear-gradient(94deg, rgb(52, 55, 65) 0%, rgb(227, 255, 231) 99%);
+  --experience-block-background: #343741;
+  --skill-background: rgba(52, 55, 65, 0.7);
+  --hero-mobile-background: transparent url(../../assets/images/background/mobile/home-hero-dark.png) no-repeat left top / cover;
+  --hero-desktop-background: transparent url(../../assets/images/background/desktop/home-hero-dark.png) no-repeat left top / cover;
+  --contact-mobile-background: transparent url(../../assets/images/background/mobile/footer-hero-dark.png) no-repeat left top / cover;
+  --contact-desktop-background: transparent url(../../assets/images/background/desktop/footer-hero-dark.png) no-repeat left top / cover;
+}
+.dark .toggler {
+  transform: translateX(35px);
 }
 
 .hide {

@@ -8,6 +8,7 @@ html, body {
 body {
 	@include fonts.main-font(vars.$font-size-large);
 	margin: 0;
+	background-color: var(--body-background);
 
 	* {
 		outline-color: transparent;
@@ -21,6 +22,10 @@ body {
 body, div, h1, h2, h3, h4, h5, h6, p, a, span, section, header, nav, main, footer, article, aside, ul, li {
 	box-sizing: border-box;
 	line-height: 1.5;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, a, section, header, nav, main, footer, article, ul {
+	color: var(--default-font-color);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, span, li {

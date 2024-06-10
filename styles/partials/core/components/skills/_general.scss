@@ -21,7 +21,7 @@
     .skill-group {
         @include headers.default(25px, 40px);
         padding: vars.$large-gap 0 vars.$large-gap vars.$large-gap;
-        background-color: color.adjust(vars.$background-default, $alpha: -.3);
+        background-color: var(--skill-background);
 
         @media screen and (min-width: 1024px) {
             display: flex;

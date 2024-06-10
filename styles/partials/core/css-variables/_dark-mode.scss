@@ -1,0 +1,23 @@
+@use '../../../modules/variables' as vars;
+
+@use 'sass:color';
+
+.dark {
+    --default-font-color: #{vars.$font-color-light};
+
+    --body-background: #{vars.$background-dark};
+    --default-linear-gradient: #{vars.$gradient-dark};
+    --experience-background: #{vars.$gradient-dark};
+    --experience-block-background: #{vars.$background-dark};
+    --skill-background: #{color.adjust(vars.$background-dark, $alpha: -.3)};
+    
+    --hero-mobile-background: transparent url(../../assets/images/background/mobile/home-hero-dark.png) no-repeat left top / cover;
+    --hero-desktop-background: transparent url(../../assets/images/background/desktop/home-hero-dark.png) no-repeat left top / cover;
+    
+    --contact-mobile-background: transparent url(../../assets/images/background/mobile/footer-hero-dark.png) no-repeat left top / cover;
+    --contact-desktop-background: transparent url(../../assets/images/background/desktop/footer-hero-dark.png) no-repeat left top / cover;
+
+    .toggler {
+        transform: translateX(35px);
+    }
+}

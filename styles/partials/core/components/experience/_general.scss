@@ -8,7 +8,7 @@
 .experience {
 	position: relative;
 	padding: vars.$extra-large-gap 0;
-    background: vars.$page-background;
+    background: var(--experience-background);
 
 	.header {
 		@include headers.default(30px, 50px);
@@ -29,7 +29,7 @@
 	margin-top: vars.$large-gap;
 	padding: vars.$default-gap;
 	border-radius: vars.$border-radius;
-	background: vars.$gradient-default;
+	background: var(--experience-block-background);
 
 	.text {
 		@include fonts.hand-written-font(30px);

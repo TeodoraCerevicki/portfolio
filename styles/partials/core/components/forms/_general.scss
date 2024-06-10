@@ -9,7 +9,7 @@
     padding: vars.$large-gap;
     padding-bottom: vars.$extra-large-gap;
     box-shadow: vars.$default-shadow;
-    background: #fff;
+    background: var(--body-background);
 
     @media screen and (min-width: 1024px) {
         padding-bottom: vars.$large-gap;

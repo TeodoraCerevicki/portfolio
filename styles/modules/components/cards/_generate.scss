@@ -84,7 +84,7 @@ $cards: (
 
 		@if($image == 'false') {
 			#{'.' + $card} {
-				background: vars.$gradient-default;
+				background: var(--default-linear-gradient);
 			}
 		}
 

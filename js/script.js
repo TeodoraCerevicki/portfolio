@@ -19,6 +19,10 @@ $(function(){
     $('.js-close-images-icon, .js-used-images-content').click(function(){
         $('.js-used-images-content').removeClass('open');
     });
+
+    $('.js-dark-mode-toggle').click(function(){
+        $('.js-view-mode').toggleClass('dark');
+    });
 });
 
 (function() {

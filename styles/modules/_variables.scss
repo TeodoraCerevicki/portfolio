@@ -9,8 +9,10 @@ $font-color-light: #f1eee6;
 $font-color-dark: #212121;
 
 $background-default: #f7f5ef;
-$gradient-default: linear-gradient(94deg, rgba(227,255,231,1) 0%, rgba(217,231,255,1) 99%);
+$background-light: #fff;
+$background-dark: #343741;
 
+$gradient-default: linear-gradient(94deg, rgba(227,255,231,1) 0%, rgba(217,231,255,1) 99%);
 $gradient-dark: linear-gradient(94deg, rgba(52, 55, 65,1) 0%, rgba(227,255,231,1) 99%);
 
 $font-size-default: 16px;
@@ -30,5 +32,3 @@ $border-accent: 2px solid $accent-dark;
 $default-transition: .3s;
 
 $default-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-$page-background: linear-gradient(323deg, rgba(226,227,229,1) 0%, rgba(236,238,239,1) 34%);

@@ -7,3 +7,12 @@
 @mixin position-unset($top: unset, $right: unset, $bottom: unset, $left: unset) {
 	@include set.set-position(absolute, $top, $right, $bottom, $left);
 }
+
+@mixin position-center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+

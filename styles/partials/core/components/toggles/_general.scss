@@ -1,0 +1,58 @@
+@use '../../../../modules/variables' as vars;
+@use '../../../../modules/layouts/positions/absolute';
+
+$inner-shadow: inset  5px 5px 5px #d1d9e6, inset -5px -5px 10px #fff;
+$outter-shadow: 5px 5px 5px #d1d9e6, -5px -5px 10px #fff;
+
+.toggler {
+    position: absolute;
+    right: unset;
+    left: vars.$small-gap;
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: $inner-shadow;
+
+    &::before {
+        @include absolute.position-center();
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: vars.$accent;
+        border-radius: 50%;
+    } 
+}
+
+.dark-mode-toggle {
+    position: relative;
+    width: 75px;
+    height: 39px;
+    margin-left: vars.$default-gap;
+    padding: vars.$small-gap;
+    border-radius: 20px;
+    background: var(--default-linear-gradient);
+    
+    &::before,
+    &::after {
+        position: absolute;
+        top: 5px;
+        font-family: 'icomoon';
+    } 
+
+    &::before {
+        content: '\e90e';
+        left: vars.$small-gap;
+        color: vars.$accent;
+    } 
+
+    &::after {
+        content: '\e90f';
+        right: vars.$small-gap;
+    } 
+}

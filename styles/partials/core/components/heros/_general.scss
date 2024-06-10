@@ -1,20 +1,23 @@
 @use '../../../../modules/variables' as vars;
 @use '../../../../modules/layouts/alignments/items';
 @use '../../../../modules/typography/fonts';
-@use '../../../../modules/components/backgrounds/generate' as backgrounds;
 @use '../../../../modules/components/headers/generate' as headers;
 
 .opening-hero {
     @include items.fully-align(stretch, center);
-	@include backgrounds.image('background/mobile/home-hero.jpg');
     @include headers.default(25px, 70px);
     position: relative;
     height: 100vh;
     padding-top: 110px;
     background-position: center;
+    background: var(--hero-mobile-background);
 
     @media screen and (min-width: 1024px) {
-        @include backgrounds.image('background/desktop/home-hero.jpg');
+        background: var(--hero-desktop-background);
+    }
+
+    .hero-subtitle {
+        color: var(--default-font-color);
     }
 
     .text {

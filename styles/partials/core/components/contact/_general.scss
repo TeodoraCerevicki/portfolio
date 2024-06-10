@@ -1,19 +1,18 @@
 @use '../../../../modules/variables' as vars;
-@use '../../../../modules/components/backgrounds/generate' as backgrounds;
 
 .contact {
-	@include backgrounds.image('background/mobile/footer-hero.jpg');
     position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background: var(--contact-mobile-background);
 
     .title {
         margin-bottom: vars.$default-gap;
     }
 
     @media screen and (min-width: 1024px) {
-        @include backgrounds.image('background/desktop/footer-hero.jpg');
+        background: var(--contact-desktop-background);
     }
 }
