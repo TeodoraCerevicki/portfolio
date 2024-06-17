@@ -6,64 +6,39 @@
 
 
 $cards: (
-	
-	app-ebo: (image: 'projects/app-ebo.jpeg', 
-			size: cover,
-			card-column: '1/3', 
-			card-row: '1/3'),
-
-	app-ns: (image: 'projects/app-ns.jpeg', 
-			size: contain,
-			color: #c6b6e5,
-			position: center,
-			card-column: '3/5', 
-			card-row: '1/3'),
 
 	app-web-workshop: (image: 'projects/app-web-workshop.png', 
 			size: initial,
 			position: center,
 			color: #7d50fc,
-			card-column: '5/7', 
+			card-column: '1/3', 
 			card-row: '1/3'),
 
-	app-entry: (image: 'projects/app-entry.jpeg', 
-				size: contain,
-				color: #9cd3e7,
-				position: center,
-				card-column: '1/3', 
-				card-row: '3/5'),
 
 	app-interview: (image: 'projects/app-interview.jpeg', 
 			size: contain,
 			color: #ebd78e,
 			position: center,
 			card-column: '3/5', 
-			card-row: '3/5'),
-
-	app-nhl: (image: 'projects/app-nhl.jpeg', 
-			size: contain,
-			color: #d1d1d0,
-			position: center,
-			card-column: '5/7', 
-			card-row: '3/5'),
+			card-row: '1/3'),
 
 	app-eu-fund: (image: 'projects/app-eu-fund.png', 
 			size: cover,
-			card-column: '1/3', 
-			card-row: '5/7'),
+			card-column: '5/7', 
+			card-row: '1/3'),
 
 	app-web-workshop-lecturer: (image: 'projects/app-web-workshop.png', 
 			size: initial,
 			position: center,
 			color: #7d50fc,
 			card-column: '3/5', 
-			card-row: '5/7'),
+			card-row: '3/5'),
 
 	app-codepen: (image: 'projects/app-codepen.png', 
 			size: contain,
 			position: center,
-			card-column: '5/7', 
-			card-row: '5/7'),
+			card-column: '1/3', 
+			card-row: '3/5'),
 );
 
 @mixin generate() {
