@@ -1,6 +1,11 @@
 @use '../../../../modules/variables' as vars;
 @use '../../../../modules/components/headers/generate' as headers;
 
+@use 'sass:color';
+
+$label-inactive: #5f5f5f;
+$label-active: #212121;
+
 .form {
     @include headers.default(20px, 20px);
     display: flex;
@@ -16,26 +21,61 @@
     }
 }
 
+.input-container {
+    position: relative;
+    margin-top: vars.$default-gap;
+}
+
 .input-field,
 .textarea {
+    width: 100%;
+    margin-bottom: vars.$default-gap;
     padding: vars.$small-gap;
     background-color: vars.$background-default;
     font-size: vars.$font-size-default; 
-}
-
-.input-field {
-    margin-bottom: vars.$default-gap;
     border: none;
     border-bottom: 1px solid vars.$primary;
 
-    &:focus {
+    &:focus,
+    &:valid {
         border: none;
-        border-bottom: 2px solid vars.$accent;
+        border-bottom: 1px solid vars.$accent;
+
+        + .form-label {
+            top: -19px;
+            font-size: 13px;
+            color: $label-active;
+            background-color: color.adjust(vars.$accent-light, $alpha: -.3);
+        }
     }
+
+    // &:focus:invalid {
+    //     + .form-label {
+    //         top: -19px;
+    //         font-size: 13px;
+    //         color: $label-active;
+    //         background-color: color.adjust(vars.$accent-light, $alpha: -.3);
+    //     }
+    // }
 }
 
-.textarea {
-    &:focus {
-        border: 2px solid vars.$accent;
+.form-label {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    padding: {
+        right: vars.$small-gap;
+        left: vars.$small-gap;
+    }
+    font-size: 16px;
+    transition: all .3s ease;
+    color: $label-inactive;
+}
+
+.input-field:invalid {
+    + .form-label {
+        top: -19px;
+        font-size: 13px;
+        color: $label-active;
     }
 }

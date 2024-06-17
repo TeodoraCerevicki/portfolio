@@ -445,14 +445,27 @@
                 </header>
 
                 <input type="hidden" name="contact_number">
-                <input name="user_name" type="text" id="name" class="input-field" placeholder="What is your name?"
-                    required>
-                <input name="user_email" type="email" id="email" class="input-field" placeholder="What is your email?"
-                    required>
-                <input name="user_subject" type="text" id="title" class="input-field" placeholder="Title of our topic"
-                    required>
-                <textarea name="message" id="message" class="textarea" cols="30" rows="10"
-                    placeholder="Description of our topic" required></textarea>
+
+                <div class="input-container">
+                    <input name="user_name" type="text" id="name" class="input-field" required>
+                    <label for="name" class="form-label">What is your name?</label>
+                </div>
+
+                <div class="input-container">
+                    <input name="user_email" type="email" id="email" class="input-field" required>
+                    <label for="email" class="form-label">What is your email?</label>
+                </div>
+
+                <div class="input-container">
+                    <input name="user_subject" type="text" id="title" class="input-field" required>
+                    <label for="title" class="form-label">Title of our topic</label>
+                </div>
+
+                <div class="input-container">
+                    <textarea name="message" id="message" class="textarea" cols="30" rows="10" required></textarea>
+                    <label for="message" class="form-label">Description of our topic</label>
+                </div>
+                
                 <button class="button-accent" type="submit">Send</button>
 
                 <p class="status-success status-message">Message was successfully sent!</p>
