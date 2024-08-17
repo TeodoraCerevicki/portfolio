@@ -3,9 +3,6 @@
 
 @use 'sass:color';
 
-$label-inactive: #5f5f5f;
-$label-active: #212121;
-
 .form {
     @include headers.default(20px, 20px);
     display: flex;
@@ -21,42 +18,28 @@ $label-active: #212121;
     }
 }
 
-.input-container {
-    position: relative;
-    margin-top: vars.$default-gap;
-}
-
 .input-field,
 .textarea {
-    width: 100%;
-    margin-bottom: vars.$default-gap;
     padding: vars.$small-gap;
     background-color: vars.$background-default;
     font-size: vars.$font-size-default; 
+}
+
+.input-field {
+    margin-bottom: vars.$default-gap;
     border: none;
     border-bottom: 1px solid vars.$primary;
 
-    &:focus,
-    &:valid {
+    &:focus {
         border: none;
-        border-bottom: 1px solid vars.$accent;
-
-        + .form-label {
-            top: -19px;
-            font-size: 13px;
-            color: $label-active;
-            background-color: color.adjust(vars.$accent-light, $alpha: -.3);
-        }
+        border-bottom: 2px solid vars.$accent;
     }
+}
 
-    // &:focus:invalid {
-    //     + .form-label {
-    //         top: -19px;
-    //         font-size: 13px;
-    //         color: $label-active;
-    //         background-color: color.adjust(vars.$accent-light, $alpha: -.3);
-    //     }
-    // }
+.textarea {
+    &:focus {
+        border: 2px solid vars.$accent;
+    }
 }
 
 .form-label {
