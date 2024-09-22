@@ -46,6 +46,7 @@
             </ul>
 
             <ul class="social-nav">
+                
                 <li>
                     <a class="item" href="https://www.fiverr.com/teodoracerevick?up_rollout=true" target="_blank">
                         <span class="icon-fiverr"></span>
@@ -75,93 +76,56 @@
         </div>
     </nav>
 
-    <main class="page-trivia">
+    <main class="page-trivia container post-warpper">
         <div class="trivia-background">
         </div>
+        
+        <a href="./trivia.html" class="link">
+            <span class="icon-arrow-left icon"></span>
+            back to Trivia page
+        </a>
 
-        <header id="hero" class="opening-hero">
-            <div class="container">
-                <h1 class="subtitle">some</h1>
-                <h2 class="title">Trivia - why not?</h2>
+        <section class="post">
+            <header class="header">
+                <img src="../assets/images/trivia/john-doe.jpg" alt="" class="image">
+                <h1 class="title">John Doe - The mysterious lad</h1>
+            </header>
+
+            <div class="content">
                 <p class="text">
-                    Welcome to my Trivia page </br>were you might see something you didn't know </br>and learn more about my interests
+                    During your IT studies you might come across ‘John Doe’ as an example for a 
+                    log-in page or some sort of a placeholder. Have you ever wondered why ‘John Doe’ 
+                    and who the hell is he? Well, let me tell you, it’s not a pretty story.
+                    <br/> <br/>
+                    Wiki says ‘"John Doe" (for men) and "Jane Doe" (for women) are multiple-use placeholder 
+                    names that are used when the true name of a person is unknown or is being intentionally concealed’.
+                    <br/> <br/>
+                    This didn’t start nowadays, for the use of placeholders on log-in pages, no.
+                    ‘John Doe’ originated during the medieval times in the UK and it got stuck in  English law.  
+                    <br/> <br/>
+                    In these times, it was used for a lawsuit, where John Doe was fictitious plaintiff and 
+                    Richard Roe was  fictitious defendant. No one knows when these names were first used, 
+                    are they really and if not, how were they picked. The assumption is that they were 
+                    picked because they were the most common names.
+                    <br/> <br/>
+                    Fun fact is that both surnames, Doe and Roe, reference deer, doe as a female deer 
+                    and roe as Eurasian deer species.
+                    <br/> <br/>
+                    In Ancient Rome, John Doe was Aulus Agerius and Richard Roe was Numerius Negidius.
+                    Now, what is not a fun fact is that in the USA ‘John Doe’ is often used for unknown 
+                    or unconfirmed corpses and serial killers.
+                    To make it creepier, there is a whole family! John, Jane, James and baby Doe! 
+                    As I said, not pretty. At all!
+                    <br/> <br/>
+                    Another thing, ‘John Doe’ has 8 characters, it’s too short! Your QA may report an 
+                    issue that says ‘longer name goes out of input field on iPhone6’ and you would go all Samuel L. Jackson on him, if you know what I mean ;)
+                    <br/> <br/>
+                    So, to cheer things up and prevent issues, I suggest to use some other names, like 
+                    ‘Ryan Reynolds’ (13 characters), Samuel L. Jackson (17 characters) or if you want a 
+                    super long name where you can also test the font and utf-8, use ‘Mileva Marić Einstein’ (21 characters!).
+                    <br/> <br/>
+                    That’s all folks!
                 </p>
-
-                <div class="arrow-wraper">
-                    <div class="arrow arrow-first"></div>
-                    <div class="arrow arrow-second"></div>
-                </div>
-            </div>
-            
-            <!-- <a href="#trivia" class="icon-arrow-down scroll-button"></a> -->
-        </header>
-
-        <section id="trivia" class="">
-            <div class="container">
-
-                <div class="cards-conainer">
-
-                    <a href="./post-dali.html" class="post-link">
-                        <section class="card">
-                            <div class="cover-image">
-                                <img src="../assets/images/trivia/dali-chups.png" class="image" alt="chupa chups Dali image">
-                            </div>
-
-                            <h1 class="title">Iconic duo - Chupa chups and Salvador Dalí</h1>
-                            <p class="desc">
-                                Probably the most know trivia is that Salvador Dali designed logo for chupa chups.
-                            </p>
-
-                            <span class="read">Tell me more!</span>
-                        </section>
-                    </a>
-
-                    <a href="./post-john-doe.html" class="post-link">
-                        <section class="card">
-                            <div class="cover-image">
-                                <img src="../assets/images/trivia/john-doe.jpg" class="image" alt="image of a detective">
-                            </div>
-
-                            <h1 class="title">John Doe - The mysterious lad</h1>
-                            <p class="desc">
-                                Who the hell is John Doe?!
-                            </p>
-
-                            <span class="read">Tell me more!</span>
-                        </section>
-                    </a>
-
-                    <a href="./post-heart.html" class="post-link">
-                        <section class="card">
-                            <div class="cover-image">
-                                <img src="../assets/images/trivia/heart-joind.png" class="image" alt="heart as organ and icon">
-                            </div>
-
-                            <h1 class="title">History of Heart icon</h1>
-                            <p class="desc">
-                                How did the heart, as an organ, got this shape for public eye?
-                            </p>
-
-                            <span class="read">Tell me more!</span>
-                        </section>
-                    </a>
-
-                    <a href="./post-pregnancy.html" class="post-link">
-                        <section class="card">
-                            <div class="cover-image">
-                                <img src="../assets/images/trivia/woman-cat.jpg" class="image" alt="woman holding a cat">
-                            </div>
-
-                            <h1 class="title">Women and other mammals</h1>
-                            <p class="desc">
-                                Can a woman get pregnant multiple times during one period, like cats?
-                            </p>
-
-                            <span class="read">Tell me more!</span>
-                        </section>
-                    </a>
-                </div>
-
             </div>
         </section>
     </main>
@@ -195,7 +159,7 @@
             </li>
         </ul>
 
-        <div class="images-used">
+        <!-- <div class="images-used">
             <span class="icon-photo_library icon js-used-images-icon"></span>
             <section class="content js-used-images-content">
                 <div class="header">
@@ -203,11 +167,10 @@
                     <span class="icon-close close-icon js-close-images-icon"></span>
                 </div>
                 <a href="https://rb.gy/k4nhqp" class="item" target="_blank">Home image</a>
-                <a href="https://rb.gy/l0g2z6" class="item" target="_blank">John Doe</a>
                 <a href="https://rb.gy/poty7g" class="item" target="_blank">Woman & cat image</a>
                 <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons" class="item" target="_blank">Arrow icons created by Freepik - Flaticon</a>
             </section>
-        </div>
+        </div> -->
     </footer>
 
     <!-- JS  -->

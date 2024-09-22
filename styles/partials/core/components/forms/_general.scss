@@ -20,6 +20,7 @@
 
 .input-field,
 .textarea {
+    border-radius: 0;
     padding: vars.$small-gap;
     background-color: vars.$background-default;
     font-size: vars.$font-size-default; 
@@ -52,13 +53,4 @@
     }
     font-size: 16px;
     transition: all .3s ease;
-    color: $label-inactive;
-}
-
-.input-field:invalid {
-    + .form-label {
-        top: -19px;
-        font-size: 13px;
-        color: $label-active;
-    }
 }

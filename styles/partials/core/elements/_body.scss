@@ -11,6 +11,7 @@ body {
 	background-color: var(--body-background);
 
 	* {
+		outline: none !important;
 		outline-color: transparent;
 	}
 
