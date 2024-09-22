@@ -54,7 +54,7 @@
         padding: vars.$large-gap;
     }
 
-    .header, .content {
+    .header, .content-wrapper {
         background-color: vars.$background-default;
     }
     .header {
@@ -66,7 +66,6 @@
         overflow: hidden;
 
         @media screen and (min-width: 768px) {
-            justify-content: flex-start;
             flex-wrap: nowrap;
             padding: vars.$default-gap;
         }
@@ -95,7 +94,7 @@
         }
     }
 
-    .content {
+    .content-wrapper {
         margin-top: vars.$large-gap;
         padding: vars.$large-gap vars.$default-gap;
         border-bottom-left-radius: vars.$border-radius;
@@ -103,14 +102,44 @@
         border-top: 1px solid vars.$accent;
     }
 
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
     .text {
         font-size: 16px;
 
         @media screen and (min-width: 768px) {
-            margin: 0 auto;
-            max-width: 800px;
             font-size: 20px;
         }
+    }
+
+    .image-wrapper {
+        
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid: {
+                template-columns: repeat(2, 1fr);
+                auto-rows: minmax(150px, auto);
+                gap: vars.$default-gap;
+            }
+            padding: vars.$large-gap 0;
+        }
+    }
+
+    .figure-image {
+        @media screen and (min-width: 768px) {
+            height: 400px;
+        }
+    }
+
+    .figure-caption {
+        color: vars.$accent-dark;
+    }
+
+    .referential-links {
+        margin-top: vars.$large-gap;
     }
 }
 
