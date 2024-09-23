@@ -116,6 +116,7 @@
     }
 
     .image-wrapper {
+        padding: vars.$large-gap 0;
         
         @media screen and (min-width: 768px) {
             display: grid;
@@ -124,7 +125,6 @@
                 auto-rows: minmax(150px, auto);
                 gap: vars.$default-gap;
             }
-            padding: vars.$large-gap 0;
         }
     }
 
@@ -135,6 +135,8 @@
     }
 
     .figure-caption {
+        margin-top: vars.$small-gap;
+        font-size: 15px;
         color: vars.$accent-dark;
     }
 
