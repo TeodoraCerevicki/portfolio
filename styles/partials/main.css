@@ -1385,6 +1385,34 @@ li {
   transform: scale(1.01);
 }
 
+.graphic-design {
+  background-color: #11071f;
+}
+.graphic-design .opening-hero {
+  height: unset;
+  background: transparent;
+}
+.graphic-design .opening-hero .subtitle,
+.graphic-design .opening-hero .text {
+  color: white;
+}
+
+.content {
+  padding: 32px 0;
+}
+@media screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 16px;
+  }
+}
+
+.preview-image.portrait {
+  height: 400px;
+  width: 310px;
+}
+
 :root {
   --default-font-color: #212121;
   --body-background: #fff;

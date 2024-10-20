@@ -1,0 +1,37 @@
+@use "../../../modules/variables" as vars;
+
+$primary: #11071f;
+$gradient-default: radial-gradient(
+  circle,
+  rgba(118, 60, 172, 1) 0%,
+  rgba(50, 15, 133, 1) 100%
+);
+
+.graphic-design {
+  background-color: $primary;
+
+  .opening-hero {
+    height: unset;
+    background: transparent;
+
+    .subtitle,
+    .text {
+      color: white;
+    }
+  }
+}
+
+.content {
+  padding: vars.$large-gap 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: vars.$default-gap;
+  }
+}
+
+.preview-image.portrait {
+  height: 400px;
+  width: 310px;
+}
