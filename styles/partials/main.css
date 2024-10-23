@@ -1394,7 +1394,45 @@ li {
 }
 .graphic-design .opening-hero .subtitle,
 .graphic-design .opening-hero .text {
-  color: white;
+  color: #f1eee6;
+}
+
+.portfolio-wrapper {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.portfolio-section {
+  margin-top: 100px;
+}
+.portfolio-section .subtitle {
+  font-family: "Indie_Flower";
+  font-size: 30px;
+}
+.portfolio-section .title {
+  font-family: "Montserrat SemiBold";
+  font-size: 50px;
+  color: #00cc83;
+  line-height: 1.1;
+}
+.portfolio-section .hero-subtitle {
+  font-family: "Montserrat SemiBold";
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.portfolio-section .mobile-break-word {
+  display: block;
+}
+@media screen and (min-width: 500px) {
+  .portfolio-section .mobile-break-word {
+    display: inline-block;
+  }
+}
+.portfolio-section:first-child {
+  margin-top: 0;
+}
+.portfolio-section .subtitle {
+  color: #f1eee6;
 }
 
 .content {
@@ -1402,14 +1440,25 @@ li {
 }
 @media screen and (min-width: 768px) {
   .content {
+    padding: 32px 0;
     display: flex;
     flex-wrap: wrap;
     grid-gap: 16px;
   }
 }
 
-.preview-image.portrait {
+.preview-block {
+  margin-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  .preview-block {
+    margin-top: 0;
+  }
+}
+.preview-block .preview-image {
   height: 400px;
+}
+.preview-block .preview-image.portrait {
   width: 310px;
 }
 

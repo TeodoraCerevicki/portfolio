@@ -1,4 +1,5 @@
 @use "../../../modules/variables" as vars;
+@use "../../../modules/components/headers/generate" as headers;
 
 $primary: #11071f;
 $gradient-default: radial-gradient(
@@ -16,8 +17,25 @@ $gradient-default: radial-gradient(
 
     .subtitle,
     .text {
-      color: white;
+      color: vars.$font-color-light;
     }
+  }
+}
+
+.portfolio-wrapper {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.portfolio-section {
+  @include headers.default(30px, 50px);
+
+  margin-top: 100px;
+  &:first-child {
+    margin-top: 0;
+  }
+  .subtitle {
+    color: vars.$font-color-light;
   }
 }
 
@@ -25,13 +43,25 @@ $gradient-default: radial-gradient(
   padding: vars.$large-gap 0;
 
   @media screen and (min-width: 768px) {
+    padding: vars.$large-gap 0;
     display: flex;
     flex-wrap: wrap;
     grid-gap: vars.$default-gap;
   }
 }
 
-.preview-image.portrait {
-  height: 400px;
-  width: 310px;
+.preview-block {
+  margin-top: vars.$large-gap;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  .preview-image {
+    height: 400px;
+
+    &.portrait {
+      width: 310px;
+    }
+  }
 }
