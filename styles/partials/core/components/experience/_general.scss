@@ -1,48 +1,49 @@
-@use '../../../../modules/variables' as vars;
-@use '../../../../modules/components/headers/generate' as headers;
-@use '../../../../modules/typography/fonts';
-@use '../../../../modules/layouts/positions/absolute';
+@use "../../../../modules/variables" as vars;
+@use "../../../../modules/components/headers/generate" as headers;
+@use "../../../../modules/typography/fonts";
+@use "../../../../modules/layouts/positions/absolute";
 
-@use 'sass:color';
+@use "sass:color";
 
 .experience {
-	position: relative;
-	padding: vars.$extra-large-gap 0;
+    position: relative;
+    padding: vars.$extra-large-gap 0;
     background: var(--experience-background);
 
-	.header {
-		@include headers.default(30px, 50px);
+    .header {
+        @include headers.default(30px, 50px);
 
-		.desc {
-			width: 100%;
-			max-width: 700px;
-			margin-top: vars.$large-gap;
-		}
-	}
+        .desc {
+            width: 100%;
+            max-width: 700px;
+            margin-top: vars.$large-gap;
+        }
+    }
 }
 
 .experience-block-container {
-	margin-top: vars.$extra-large-gap;
+    margin-top: vars.$extra-large-gap;
 }
 
 .experience-block {
-	margin-top: vars.$large-gap;
-	padding: vars.$default-gap;
-	border-radius: vars.$border-radius;
-	background: var(--experience-block-background);
+    margin-top: vars.$large-gap;
+    padding: vars.$default-gap;
+    border-radius: vars.$border-radius;
+    background: var(--experience-block-background);
 
-	.text {
-		@include fonts.hand-written-font(30px);
-		position: relative;
-		text-transform: capitalize;
-		&::after {
-			@include absolute.position-unset(unset, 0, 4px, 0);
-			content: '';  
-			height: 10px;
-			display: block;
-			border-bottom: 10px solid color.adjust(vars.$accent-dark, $alpha: -.3);
-		}
-	}
+    .text {
+        @include fonts.hand-written-font(30px);
+        position: relative;
+        text-transform: capitalize;
+        &::after {
+            @include absolute.position-unset(unset, 0, 4px, 0);
+            content: "";
+            height: 10px;
+            display: block;
+            border-bottom: 10px solid
+                color.adjust(vars.$accent-dark, $alpha: -0.3);
+        }
+    }
 }
 
 .projects-wrapper {
@@ -51,16 +52,17 @@
     z-index: 1;
     right: 0;
 
-	.text {
-		@include fonts.hand-written-font(22px);
-	}
+    .text {
+        @include fonts.hand-written-font(22px);
+        color: vars.$primary;
+    }
 
-	.icon {
-		transform: scaleY(-1);
-		display: block;
-		padding-right: vars.$large-gap;
-		font-size: 55px;
-		text-align: right;
-		color: vars.$accent-dark;
-	}
+    .icon {
+        transform: scaleY(-1);
+        display: block;
+        padding-right: vars.$large-gap;
+        font-size: 55px;
+        text-align: right;
+        color: vars.$accent-dark;
+    }
 }

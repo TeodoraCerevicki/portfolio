@@ -3,65 +3,69 @@
 
 $primary: #11071f;
 $gradient-default: radial-gradient(
-  circle,
-  rgba(118, 60, 172, 1) 0%,
-  rgba(50, 15, 133, 1) 100%
+    circle,
+    rgba(118, 60, 172, 1) 0%,
+    rgba(50, 15, 133, 1) 100%
 );
 
 .graphic-design {
-  background-color: $primary;
+    background-color: $primary;
 
-  .opening-hero {
-    height: unset;
-    background: transparent;
+    .opening-hero {
+        height: unset;
+        background: transparent;
 
-    .subtitle,
-    .text {
-      color: vars.$font-color-light;
+        .subtitle,
+        .text {
+            color: vars.$font-color-light;
+        }
     }
-  }
 }
 
 .portfolio-wrapper {
-  margin-top: 20%;
-  margin-bottom: 20%;
+    margin-top: 20%;
+    margin-bottom: 20%;
 }
 
 .portfolio-section {
-  @include headers.default(30px, 50px);
+    @include headers.default(30px, 50px);
 
-  margin-top: 100px;
-  &:first-child {
-    margin-top: 0;
-  }
-  .subtitle {
-    color: vars.$font-color-light;
-  }
+    margin-top: 100px;
+    &:first-child {
+        margin-top: 0;
+    }
+    .subtitle {
+        color: vars.$font-color-light;
+    }
 }
 
 .content {
-  padding: vars.$large-gap 0;
-
-  @media screen and (min-width: 768px) {
     padding: vars.$large-gap 0;
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: vars.$default-gap;
-  }
+
+    @media screen and (min-width: 768px) {
+        padding: vars.$large-gap 0;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: vars.$default-gap;
+    }
 }
 
 .preview-block {
-  margin-top: vars.$large-gap;
+    margin-top: vars.$large-gap;
 
-  @media screen and (min-width: 768px) {
-    margin-top: 0;
-  }
-
-  .preview-image {
-    height: 400px;
-
-    &.portrait {
-      width: 310px;
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
     }
-  }
+
+    .preview-image {
+        height: auto;
+
+        @media screen and (min-width: 768px) {
+            height: 400px;
+        }
+
+        &.portrait {
+            width: 310px;
+        }
+    }
 }

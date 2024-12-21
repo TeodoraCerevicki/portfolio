@@ -140,6 +140,9 @@ li {
   line-height: 1.1;
   color: #f1eee6;
 }
+.button-accent:hover, .button-primary:hover {
+  color: #f1eee6;
+}
 
 .button-primary {
   background-color: #212121;
@@ -834,6 +837,7 @@ li {
 .projects-wrapper .text {
   font-family: "Indie_Flower";
   font-size: 22px;
+  color: #212121;
 }
 .projects-wrapper .icon {
   transform: scaleY(-1);
@@ -1456,7 +1460,12 @@ li {
   }
 }
 .preview-block .preview-image {
-  height: 400px;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .preview-block .preview-image {
+    height: 400px;
+  }
 }
 .preview-block .preview-image.portrait {
   width: 310px;
