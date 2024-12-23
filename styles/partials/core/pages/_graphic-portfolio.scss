@@ -1,5 +1,6 @@
 @use "../../../modules/variables" as vars;
 @use "../../../modules/components/headers/generate" as headers;
+@use "../../../modules/layouts/alignments/items";
 
 $primary: #11071f;
 $gradient-default: radial-gradient(
@@ -67,5 +68,15 @@ $gradient-default: radial-gradient(
         &.portrait {
             width: 310px;
         }
+    }
+}
+
+.frontend-starting-point {
+    @include items.align-absolute-center();
+    width: 400px;
+
+    .preview-image {
+        width: auto;
+        height: auto;
     }
 }

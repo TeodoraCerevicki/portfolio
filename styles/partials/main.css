@@ -1471,6 +1471,19 @@ li {
   width: 310px;
 }
 
+.frontend-starting-point {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+.frontend-starting-point .preview-image {
+  width: auto;
+  height: auto;
+}
+
 :root {
   --default-font-color: #212121;
   --body-background: #fff;
